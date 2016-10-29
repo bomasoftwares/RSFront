@@ -1,0 +1,17 @@
+{
+  "name": "RSFront",
+  "homepage": "https://github.com/bomasoftwares/RSFront",
+  "authors": [
+    "Arthur Augusto <arthuraasantos@hotmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
