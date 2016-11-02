@@ -1,0 +1,28 @@
+.skin-system{
+    background-color: #000000 !important;
+}
+
+.bt-redes-sociais{
+    float: left;
+
+}
+
+.admin-form{
+    max-width: 500px !important;
+    margin-top: 0% !important;
+}
+
+/*.gui-input:hover{
+    border-color: #df5640 !important;
+}*/
+
+.btn-danger{
+    background-color:#dd4b39 !important;
+    border-color: #dd4b39 !important;  
+
+}
+
+.panel-danger{
+    width: 505px !important;
+
+}
