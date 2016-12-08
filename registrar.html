@@ -2,7 +2,7 @@
 <html>
 
 <head>
-   <!-- Meta, title, CSS, favicons, etc. -->
+  <!-- Meta, title, CSS, favicons, etc. -->
   <meta charset="utf-8">
   <title>Movie Sex</title>
   <meta name="keywords" content="Movie Sex" />
@@ -15,7 +15,10 @@
 
   <!-- Theme CSS -->
   <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
+  <link rel="stylesheet" type="text/css" href="app.css">
   <link rel="stylesheet" type="text/css" href="registrar.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/animate.css/animate.min.css">
+  
 
   <!-- Admin Forms CSS -->
   <link rel="stylesheet" type="text/css" href="assets/admin-tools/admin-forms/css/admin-forms.min.css">
@@ -24,7 +27,7 @@
   <link rel="shortcut icon" href="img/B-boma.png">
 </head>
 
-<body class="external-page external-alt sb-l-c sb-r-c">
+<body class="external-page external-alt sb-l-c sb-r-c" ng-app="sexmoveApp" ng-controller="registrerCtrl">
 
   <!-- Start: Main -->
   <div id="main" class="animated fadeIn">
@@ -40,173 +43,144 @@
           <!-- Registration Logo -->
           <div class="row table-layout">
             <a href="index.html" title="Voltar para início">
-              <img src="img/logo.jpg" title="Logo Movie Sex" class="center-block img-responsive" style="max-width: 275px;">
+              <img src="img/logo.png" title="Logo Movie Sex" class="center-block img-responsive" style="max-width: 180px;">
             </a>
           </div>
 
           <!-- Registration Panel/Form -->
           <div class="panel mt40">
-
-            <form method="post" action="/" id="contact">
-              <div class="panel-body bg-light p25 pb15">
-
-
-                <!-- Social Login Buttons -->
-                <div class="section row hidden">
-                  <div class="col-md-4">
-                    <a href="#" class="button btn-social facebook span-left btn-block">
-                      <span>
-                        <i class="fa fa-facebook"></i>
-                      </span>Facebook</a>
-                  </div>
-                  <div class="col-md-4">
-                    <a href="#" class="button btn-social twitter span-left btn-block">
-                      <span>
-                        <i class="fa fa-twitter"></i>
-                      </span>Twitter</a>
-                  </div>
-                  <div class="col-md-4">
-                    <a href="#" class="button btn-social googleplus span-left btn-block">
-                      <span>
-                        <i class="fa fa-google-plus"></i>
-                      </span>Google+</a>
-                  </div>
-                </div>
-
-
-                <!-- Divider -->
-                <div class="section-divider mv30 hidden">
-                  <span>OR</span>
-                </div>
-
+            <form method="post" action="/" name="register">
+              <div class="panel-body bg-light bm-p21 pb15">
                 <div class="section row">
-                  <div class="col-md-6">
-                    <label for="firstname" class="field prepend-icon">
-                      <input type="text" name="firstname" id="firstname" class="gui-input" placeholder="First name...">
-                      <label for="firstname" class="field-icon">
-                        <i class="fa fa-user"></i>
-                      </label>
+                  <label>Que tipo de cadastro você quer fazer?</label>
+                  <br>
+                  <br>
+                  <div class="account-types">
+                    <label class="account-type">
+                      <input type="radio" name="AccountType" ng-model="AccountType" value="0">
+                      <i class="fa fa-user fa-3x"></i>
+                      &nbsp;
+                      <i class="fa fa-certificate fa-3x"></i>
+                      <br>
+                      <br>
+                      Usuário<br>
                     </label>
-                  </div>
-                  <!-- end section -->
-
-                  <div class="col-md-6">
-                    <label for="lastname" class="field prepend-icon">
-                      <input type="text" name="lastname" id="lastname" class="gui-input" placeholder="Last name...">
-                      <label for="lastname" class="field-icon">
-                        <i class="fa fa-user"></i>
-                      </label>
-                    </label>
-                  </div>
+                  <label class="account-type">
+                    <input type="radio" name="AccountType" ng-model="AccountType" value="1">
+                    <i class="fa fa-group fa-3x"></i>
+                    <br>
+                    <br>
+                    Acompanhante
+                  </label>
+                  <label class="account-type">
+                    <input type="radio" name="AccountType" ng-model="AccountType" value="2">
+                    <i class="fa fa-building fa-3x"></i>
+                    <br>
+                    <br>
+                    Comerciante
+                  </label>
+                </div>
                   <!-- end section -->
                 </div>
                 <!-- end .section row section -->
-
-                <div class="section">
-                  <label for="email" class="field prepend-icon">
-                    <input type="email" name="email" id="email" class="gui-input" placeholder="Email address">
-                    <label for="email" class="field-icon">
-                      <i class="fa fa-envelope"></i>
-                    </label>
-                  </label>
-                </div>
-                <!-- end section -->
-
-                <div class="section hidden">
-                  <div class="smart-widget sm-right smr-120">
-                    <label for="username" class="field prepend-icon">
-                      <input type="text" name="username" id="username" class="gui-input" placeholder="Choose your username">
-                      <label for="username" class="field-icon">
-                        <i class="fa fa-user"></i>
-                      </label>
-                    </label>
-                    <label for="username" class="button">.envato.com</label>
+                <div class="section user-data animated fadeIn" ng-show="AccountType == 0">
+                  <blockquote class="blockquote-danger">
+                    <p>
+                      <i class="fa fa-bell animated fadeRight"></i>
+                      Conta grátis por <strong class="bm-important">10 dias</strong>.</p>
+                  </blockquote>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label>Eu sou:</label> 
+                      <br>
+                      <br>
+                      <select class="form-control" name="myGenre">
+                        <option value="0">Homem</option>
+                        <option value="1">Mulher</option>
+                        <option value="2">Ele x Ela</option>
+                        <option value="3">Ele x Ele</option>
+                        <option value="4">Ela x Ela</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label>Procuro por:</label> 
+                      <br>
+                      <br>
+                      <select class="form-control" name="searchGenre">
+                        <option value="0">Homem</option>
+                        <option value="1">Mulher</option>
+                        <option value="2">Ele x Ela</option>
+                        <option value="3">Ele x Ele</option>
+                        <option value="4">Ela x Ela</option>
+                      </select>
+                    </div>
                   </div>
-                  <!-- end .smart-widget section -->
+                  <br>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label class="field prepend-icon">
+                        <input type="email" name="email" class="gui-input" placeholder="Email">
+                        <label class="field-icon">
+                          <i class="fa fa-envelope"></i>
+                        </label>
+                      </label>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label class="field prepend-icon">
+                        <input type="text" name="nickName" class="gui-input" placeholder="Como prefere ser chamado?">
+                        <label class="field-icon">
+                          <i class="fa fa-font"></i>
+                        </label>
+                      </label>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label class="field prepend-icon">
+                        <input type="password" name="password" class="gui-input" placeholder="Senha">
+                        <label class="field-icon">
+                          <i class="fa fa-key"></i>
+                        </label>
+                      </label>
+                    </div>
+                  </div>
                 </div>
+
+                <div class="section partner-data animated fadeIn" ng-show="AccountType == 1"> Acompanhante</div>
+                <div class="section commerce-data animated fadeIn" ng-show="AccountType == 2"> Comerciante</div>
+                
                 <!-- end section -->
-
-
-                <hr class="alt short">
-
-                <div class="section">
-                  <label for="password" class="field prepend-icon">
-                    <input type="password" name="password" id="password" class="gui-input" placeholder="Create a password">
-                    <label for="password" class="field-icon">
-                      <i class="fa fa-unlock-alt"></i>
-                    </label>
-                  </label>
-                </div>
-                <!-- end section -->
-
-                <div class="section">
-                  <label for="confirmPassword" class="field prepend-icon">
-                    <input type="password" name="confirmPassword" id="confirmPassword" class="gui-input" placeholder="Retype your password">
-                    <label for="confirmPassword" class="field-icon">
-                      <i class="fa fa-lock"></i>
-                    </label>
-                  </label>
-                </div>
-                <!-- end section -->
-
-
               </div>
 
               <div class="panel-footer clearfix">
-                <button type="submit" class="button btn-primary mr10 pull-right">Register</button>
+                <button type="submit" class="button btn-danger mr10 pull-right">Cadastrar</button>
 
                 <label class="option block mt10">
                   <input type="checkbox" name="terms">
-                  <span class="checkbox"></span>I agree to the
-                  <a href="#" class="theme-link"> terms of use. </a>
+                  <span class="checkbox"></span>Eu aceito os
+                  <a href="#" class="theme-link"> termos de uso. </a>
                 </label>
 
                 <label class="switch block switch-primary mt10 hidden">
                   <input type="checkbox" name="remember" id="remember" checked>
-                  <label for="remember" data-on="YES" data-off="NO"></label>
-                  <span>Remember me</span>
+                  <label for="remember" data-on="SIM" data-off="NÃO"></label>
+                <span>Lembrar-me?</span>
                 </label>
               </div>
 
             </form>
           </div>
 
-          <!--  Divider -->
-          <hr class="alt mt40 mb30 mh70">
-
-          <!-- Registration Social Links -->
-          <div class="section row center-block" style="width: 550px;">
-            <div class="col-md-4">
-              <a href="#" class="button btn-social facebook span-left btn-block">
-                <span>
-                  <i class="fa fa-facebook"></i>
-                </span>Facebook</a>
-            </div>
-            <div class="col-md-4">
-              <a href="#" class="button btn-social twitter span-left btn-block">
-                <span>
-                  <i class="fa fa-twitter"></i>
-                </span>Twitter</a>
-            </div>
-            <div class="col-md-4">
-              <a href="#" class="button btn-social googleplus span-left btn-block">
-                <span>
-                  <i class="fa fa-google-plus"></i>
-                </span>Google+</a>
-            </div>
-          </div>
-
           <!-- Registration Links -->
           <div class="login-links">
-            <p>
-              <a href="pages_forgotpw(alt).html" class="active hidden" title="Sign In">Forgot Password?</a>
-            </p>
-            <p>Already registered?
-              <a href="pages_login(alt).html" class="active" title="Sign In">Sign in here</a>
+            <p>Já se registrou?
+              <a href="index.html" class="active" title="Fazer login">Entrar agora!</a>
             </p>
           </div>
-
-
         </div>
 
       </section>
@@ -220,10 +194,23 @@
 
 
   <!-- jQuery -->
-   <script src="bower_components\jquery\dist\jquery.min.js"></script>
+  <script src="bower_components\jquery\dist\jquery.min.js"></script>
   <script src="bower_components\jquery-ui\jquery-ui.min.js"></script>
+  <script src="bower_components\angular\angular.min.js"></script>
+  <script src="app.js"></script>
+  <script src="registrar.js"></script>
 
- 
+  <script>
+    $(document).ready(function() {
+      $('.account-type').on('change', function() {
+        $('.account-type').removeClass('selected');
+        $(this).addClass('selected');
+
+      });
+
+    });
+
+ </script>
 
 </body>
 

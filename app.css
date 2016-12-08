@@ -30,3 +30,21 @@
     width: 505px !important;
 
 }
+
+.bm-alert{
+    color: yellow;
+}
+
+.bm-important{
+    color:#F7C65F;
+}
+
+.bm-btn-danger{
+    color: #ffffff;
+    background-color: #dd4b39 !important;
+    border-color: rgba(0, 0, 0, 0.05);
+}
+
+.bm-p21{
+    padding: 21px !important;
+}
