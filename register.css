@@ -73,6 +73,38 @@ body.external-page.external-alt #main{
     }
 } 
 
+.img-tool{
+    background-image: url('img/tool.svg');
+    background-repeat: no-repeat;
+    width: 400px !important;
+    height: 40px !important;
+    background-size: 40px;
+    margin-left: 50% !important;
+    margin-right: 50% !important;
+   
+}
+
+
+.imagem{
+    display: block;
+    height: 40px;
+    text-align: center;
+
+}
+  
+.media-body{
+    width: 419px;
+}
+
+.h2{
+    text-align: center;
+}
+
+.panel{
+    width: 419px !important;
+}
+
+
 
 
 

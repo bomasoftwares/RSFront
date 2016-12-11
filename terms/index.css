@@ -1,0 +1,33 @@
+body, html{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 1% !important;
+    background-color: black;
+}
+
+.terms-content{
+    width: 80% !important;
+    margin-left: 10% !important;
+    margin-right: 10% !important;
+}
+
+
+.panel-heading{
+    height: 15%;
+    padding: 10px;
+}
+
+h1, h2{
+   margin-left: 25% !important;
+   margin-right: 25% !important;
+   text-align: center !important;
+}
+
+p{
+    font-family: Sans-Serif;
+    font-size:18px !important;
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}

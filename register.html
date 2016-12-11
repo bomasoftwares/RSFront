@@ -16,7 +16,7 @@
   <!-- Theme CSS -->
   <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
   <link rel="stylesheet" type="text/css" href="app.css">
-  <link rel="stylesheet" type="text/css" href="registrar.css">
+  <link rel="stylesheet" type="text/css" href="register.css">
   <link rel="stylesheet" type="text/css" href="bower_components/animate.css/animate.min.css">
   
 
@@ -27,7 +27,7 @@
   <link rel="shortcut icon" href="img/B-boma.png">
 </head>
 
-<body class="external-page external-alt sb-l-c sb-r-c" ng-app="sexmoveApp" ng-controller="registrerCtrl">
+<body class="external-page external-alt sb-l-c sb-r-c" ng-app="sexmoveApp" ng-controller="registerCtrl">
 
   <!-- Start: Main -->
   <div id="main" class="animated fadeIn">
@@ -49,7 +49,7 @@
 
           <!-- Registration Panel/Form -->
           <div class="panel mt40">
-            <form method="post" action="/" name="register">
+            <form method="post" action="/" name="register" ng-init="register.agreeTerms = false">
               <div class="panel-body bg-light bm-p21 pb15">
                 <div class="section row">
                   <label>Que tipo de cadastro você quer fazer?</label>
@@ -57,7 +57,7 @@
                   <br>
                   <div class="account-types">
                     <label class="account-type">
-                      <input type="radio" name="AccountType" ng-model="AccountType" value="0">
+                      <input type="radio" name="AccountType" ng-model="AccountType" value="0" ng-required="true">
                       <i class="fa fa-user fa-3x"></i>
                       &nbsp;
                       <i class="fa fa-certificate fa-3x"></i>
@@ -66,14 +66,14 @@
                       Usuário<br>
                     </label>
                   <label class="account-type">
-                    <input type="radio" name="AccountType" ng-model="AccountType" value="1">
+                    <input type="radio" name="AccountType" ng-model="AccountType" value="1" ng-required="true">
                     <i class="fa fa-group fa-3x"></i>
                     <br>
                     <br>
                     Acompanhante
                   </label>
                   <label class="account-type">
-                    <input type="radio" name="AccountType" ng-model="AccountType" value="2">
+                    <input type="radio" name="AccountType" ng-model="AccountType" value="2" ng-required="true">
                     <i class="fa fa-building fa-3x"></i>
                     <br>
                     <br>
@@ -94,7 +94,7 @@
                       <label>Eu sou:</label> 
                       <br>
                       <br>
-                      <select class="form-control" name="myGenre">
+                      <select class="form-control" name="myGenre" ng-model="Genre" ng-required="true">
                         <option value="0">Homem</option>
                         <option value="1">Mulher</option>
                         <option value="2">Ele x Ela</option>
@@ -106,7 +106,7 @@
                       <label>Procuro por:</label> 
                       <br>
                       <br>
-                      <select class="form-control" name="searchGenre">
+                      <select class="form-control" name="searchGenre" ng-model="searchGenre" ng-required="true">
                         <option value="0">Homem</option>
                         <option value="1">Mulher</option>
                         <option value="2">Ele x Ela</option>
@@ -119,7 +119,7 @@
                   <div class="row">
                     <div class="col-md-12">
                       <label class="field prepend-icon">
-                        <input type="email" name="email" class="gui-input" placeholder="Email">
+                        <input type="email" name="email" class="gui-input" placeholder="Email" ng-model="email" ng-required="true">
                         <label class="field-icon">
                           <i class="fa fa-envelope"></i>
                         </label>
@@ -130,7 +130,7 @@
                   <div class="row">
                     <div class="col-md-12">
                       <label class="field prepend-icon">
-                        <input type="text" name="nickName" class="gui-input" placeholder="Como prefere ser chamado?">
+                        <input type="text" name="nickName" class="gui-input" placeholder="Como prefere ser chamado?" ng-model="nickName" ng-required="true">
                         <label class="field-icon">
                           <i class="fa fa-font"></i>
                         </label>
@@ -141,7 +141,7 @@
                   <div class="row">
                     <div class="col-md-12">
                       <label class="field prepend-icon">
-                        <input type="password" name="password" class="gui-input" placeholder="Senha">
+                        <input type="password" name="password" class="gui-input" placeholder="Senha" ng-model="password" ng-required="true">
                         <label class="field-icon">
                           <i class="fa fa-key"></i>
                         </label>
@@ -150,19 +150,33 @@
                   </div>
                 </div>
 
-                <div class="section partner-data animated fadeIn" ng-show="AccountType == 1"> Acompanhante</div>
-                <div class="section commerce-data animated fadeIn" ng-show="AccountType == 2"> Comerciante</div>
+                <div class="section partner-data animated fadeIn" ng-show="AccountType == 1 || AccountType == 2">
+                  <br>
+                  <div class="imagem">
+                    <img src="img/tool.svg" alt="" width="30" height="30">
+                  </div>
+                  <label style="margin-left:37%;">Em construção</label> 
+                  
+                  <!--<div class="media clearfix">
+                    <div class="media-left pr20">
+                    </div>                      
+                    <br>
+                    <div class="media-body">
+                      </h2>
+                    </div>
+                  </div>-->
+                </div>
+                <div class="section commerce-data animated fadeIn" ng-show="AccountType == 2"> </div>
                 
                 <!-- end section -->
               </div>
-
               <div class="panel-footer clearfix">
-                <button type="submit" class="button btn-danger mr10 pull-right">Cadastrar</button>
+                <button type="submit" class="button btn-danger mr10 pull-right" ng-disabled="register.$invalid || agreeTerms != true">Cadastrar</button>
 
-                <label class="option block mt10">
-                  <input type="checkbox" name="terms">
+                <label class="option mt10">
+                  <input type="checkbox" ng-model="agreeTerms">
                   <span class="checkbox"></span>Eu aceito os
-                  <a href="#" class="theme-link"> termos de uso. </a>
+                  <a href="terms/index.html" class="theme-link" target="_blank"> termos de uso. </a>
                 </label>
 
                 <label class="switch block switch-primary mt10 hidden">
@@ -198,7 +212,7 @@
   <script src="bower_components\jquery-ui\jquery-ui.min.js"></script>
   <script src="bower_components\angular\angular.min.js"></script>
   <script src="app.js"></script>
-  <script src="registrar.js"></script>
+  <script src="register.js"></script>
 
   <script>
     $(document).ready(function() {
