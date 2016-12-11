@@ -6,6 +6,11 @@ body.external-page.external-alt #main{
     background-color: #000000 !important;
 }
 
+.panel{
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
 .account-type{
     display: inline-block;
     background: #fff;
@@ -89,7 +94,6 @@ body.external-page.external-alt #main{
     display: block;
     height: 40px;
     text-align: center;
-
 }
   
 .media-body{
