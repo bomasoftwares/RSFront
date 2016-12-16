@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="sexmoveApp">
 
 <head>
   <!-- Meta, title, CSS, favicons, etc. -->
   <meta charset="utf-8">
-  <title>Move Sex</title>
-  <meta name="keywords" content="Move Sex" />
-  <meta name="description" content="Move Sex">
+  <title ng-controller="MainCtrl">{{ appTitle }}</title>
+  <meta name="keywords" content="Sex Move" />
+  <meta name="description" content="Sex Move">
   <meta name="author" content="Boma Software">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Angular -->
-  <script src="bower_components/angular/angular.js"></script>
 
   <!-- Font CSS (Via CDN) -->
   <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
@@ -52,11 +49,11 @@
 
             <div class="col-xs-6 va-m pln">
               <a href="#">
-                <img src="img/logo.png" title="Logo Movie Sex" class="img-responsive w350">
+                <img src="img/logo.png" title="Logo Movie Sex" class="img-responsive w350" style="margin-bottom:20%;">
               </a>
             </div>
           </div>
-          <div class="row">
+          <!--<div class="row">
              <div class="col-sm-12 va-b pr5 text-right">
                <div>
                      <button class="zocial blogger icon" style="color:white;"></button>
@@ -64,172 +61,102 @@
                      <span class="zocial twitter icon"></span>
               </div>
             </div>
-          </div>
+          </div>-->
 
-          <div class="panel panel-danger mt10 br-n divform">
 
-            <div class="panel-heading heading-border bg-white">
-              <span class="panel-title hidden">
-                <i class="fa fa-sign-in"></i></span>
-                <div class="section row mn">
-                  <div class="col-sm-2">
-                    <i class="imoon imoon-bubbles" style="font-size:30pt; margin-top:30%; margin-left:30%;"></i>
-                  </div>
-                <div class="col-sm-10">
-                  
-                  <h3>Você está na maior e mais completa
-                    rede social liberal do BRASIL!
-                  </h3>
-                  
-                </div>
-                  
-                </div>
+
+
+
+          <!-- end .form-header section -->
+          <form>
+            <div class="col-sm-2">
             </div>
-
-            <!-- end .form-header section -->
-            <form method="post" action="/" id="contact">
-              <div class="panel-body bg-light p15">
-                <div class="row">
-                  <a href="register.html" class="button btn-success mr10" style="margin-left:30%; margin-top:1%;">Crie o seu perfil <b> GRÁTIS </b> aqui !</a>
-                      <button type="button" class="button btn-success mr10 hidden" style="margin-left:30%; margin-top:1%;" data-toggle="modal" data-target="#myModal">Crie o seu perfil <b> GRÁTIS </b> aqui !</button>
-                      <div class="section-divider mv30" style="width:80%; margin-left:10%;">
-                        <span style="color:gray;"><b>OU</b></span>
-                      </div>
-                      <!--<h4 style="margin-left:50%; margin-top:5%;">OU</h4>-->
-                 </div>
-                <div class="row">
-                  <div class="col-sm-2">
-                  </div>
-                  <div class="col-sm-9 pr30">
-                    <div class="section">
-                      <label for="username" class="field-label text-muted fs18 mb10">Usuário</label>
-                      <label for="username" class="field prepend-icon">
-                        <input type="text" name="username" id="username" class="gui-input" placeholder="Ex: moviesex2016" title="Entre com o usuário que já foi cadastrado">
+            <div class="col-sm-9">
+              <div class="row">
+                <label for="username" class="field prepend-icon">
+                        <input type="text" name="username" id="username" class="gui-input" style="background:#DCDCDC;" placeholder="Usuário" title="Entre com o usuário que já foi cadastrado">
                         <label for="username" class="field-icon">
                           <i class="fa fa-user"></i>
                         </label>
-                      </label>
-                    </div>
-                    <!-- end section -->
+                </label>
+              </div>
+              <!-- end section -->
 
-                    <div class="section">
-                      <label for="username" class="field-label text-muted fs18 mb10">Senha</label>
-                      <label for="password" class="field prepend-icon">
-                        <input type="password" name="password" id="password" class="gui-input" placeholder="Sua senha">
+              <div class="row">
+
+                <label for="password" class="field prepend-icon">
+                        <input type="password" name="password" id="password" class="gui-input" style="background:#DCDCDC;" placeholder="Senha">
                         <label for="password" class="field-icon">
                           <i class="fa fa-lock"></i>
                         </label>
-                      </label>
-                    </div>
-                    
-                    
-                    
-                  
-                    <!-- end section -->
-                    
-                  </div>
+                </label>
+              </div>
+              <div class="row">
+                <div class="col-sm-6 without-border" style="margin-top:6.5%; margin-bottom:4%;">
+                  <a href="#" style="color:white;">Esqueci a senha</a>
+                </div>
+                <div class="col-sm-6 without-border">
+                  <button type="submit" class="btn-block btn btn-danger">Entrar</button>
                 </div>
               </div>
+              <div class="row teste">
+                <button type="submit" class="btn-block btn btn-dark">Registre-se <b> GRÁTIS </b> por 10 dias ! </button>
+              </div>
+            </div>
 
-              <!-- end .form-body section -->
-              <div class="panel-footer clearfix p10 ph15">
-                <button type="submit" class="button btn-danger mr10 pull-right" style="margin-right:5% !important;">Entrar</button>
-                
-                <label class="switch ib switch-danger pull-left input-align mt10" style="margin-right:5% !important;">
-                  <input type="checkbox" name="remember" id="remember">
-                  <label for="remember" data-on="Sim" data-off="Não"></label>
-                  <span>Lembrar-me?</span>
-                </label>
-              </div>      
-              <!-- end .form-footer section -->
-            </form>
+
+            <!--<button type="submit" class="btn-block btn btn-danger" style="margin-top:5%; width:80%;">Registre-se GRÁTIS por 10 dias ! </button>-->
+            <!--<input type="button" class="button" style="background: url('img/btnGratis.png') no-repeat; margin-left:27%; margin-top:5%; width:80%; height:100px;"></input>-->
+            <!--<button type="button" class="button" style="margin-left:30%; margin-top:1%; background-color:#FF8C00; color:white; opacity:0.50; width:52%; height:100%;">Cadastre-se <b> GRÁTIS </b> por 10 dias </button>    -->
+          </form>
+          <br>
+          <br>
+          <div class="col-sm-12 phrase">
+            <img class="img-responsive" src="img/frase.png" style="margin: 0 auto;">
+            <!--<input type="image" src="img/frase.png" style="margin-left:15%; margin-top:15%;">-->
           </div>
-        </div>
-        <div class="col-sm-10">
-          <!--<hr class="alt mt10 mb10 mh10" style="margin-left:25% !important;">-->
-          <label style="margin-left:50%;">Esqueceu sua senha ? <a href="register.html">Clique aqui.</a></label>
-        </div>
-      </section>
-      <!-- End: Content -->
+          <!--<div class="col-sm-12" style="margin-top:5%; margin-left:35%;">-->
+          <div class="col-sm-12 img-social phrase">
+            <a href="https://www.blogger.com/" title="Blog" style="background: transparent; text-decoration:none;">
+              <input type="image" src="img/blog.png" alt="submit" style="padding:2%;">
+            </a>
 
-    </section>
-    <!-- End: Content-Wrapper -->
+            <a href="https://www.youtube.com/" title="YouTube" style="background: transparent; text-decoration:none;">
+              <input type="image" src="img/youtube.png" alt="submit" style="padding:2%;">
+            </a>
+
+            <a href="https://twitter.com/" title="Twitter" style="background: transparent;">
+              <input type="image" src="img/twitter.png" alt="submit" style="padding:2%;">
+            </a>
+          </div>
+          <!-- end section -->
+
+        </div>
+  </div>
+  </div>
+
+  <!-- end .form-body section -->
+
+
+  <!-- end .form-footer section -->
+  </form>
+  </div>
+  </div>
+
+  </section>
+  <!-- End: Content -->
+
+  </section>
+  <!-- End: Content-Wrapper -->
 
   </div>
-  <!-- End: Main -->
 
-  <!-- Begin Modal -->
-    <!--<div ng-app="myContato" ng-controller="myCtrlContato">
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content cont" >
-                <div class="modal-header bg-light">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h3 class="modal-title" id="myModalLabel"><i class="fa fa-comments-o" style="height:80%;"></i> Contato BOMA </h4>
-                </div>
-                <div class="modal-contato admin-form" >
-                <form>
-                    <div class="col-md-12 text-contato" style="margin-top:4%;">
-                        <select class="form-control" id="tipo_contato" ng-model="tipo_contato">
-                            <option value="0">Quero dar uma opinião.</option>
-                            <option value="1">Gostei de um produto.</option>
-                            <option value="2">Tenho uma ideia revolucionária.</option>                       
-                        </select>
-                    </div>
-                    <div class="col-md-12 text-contato">
-                        <label class="append-icon">
-                            <input type="text" class="form-control" id="pNome" name="pNome" ng-model="pNome" placeholder="Primeiro Nome">                                      
-                            <label class="field-icon">
-                                <i class="fa fa-user"></i>
-                            </label>
-                        </label>   
-                    </div>
-                    <div class="col-md-12 text-contato">
-                        <label class="append-icon">
-                            <input type="text" class="form-control" id="ultimo_nome" name="ultimo_nome" ng-model="ultimo_nome" placeholder="Último Nome">                  
-                            <label class="field-icon">
-                                <i class="fa fa-user"></i>
-                            </label>
-                        </label>              
-                    </div>
-                    <div class="col-md-12 text-contato">
-                        <label class="append-icon">
-                            <input type="text" class="form-control" id="email" name="mail" ng-model="email" placeholder="Email">
-                            <label class="field-icon">
-                                <i class="fa fa-envelope"></i>
-                            </label>
-                        </label>
-                    </div>
-                    <div class="col-md-12 text-contato">
-                        <div class="form-group">
-                            <label class="append-icon">
-                                <textarea cols="50" rows="5" class="form-control" id="msg" name="msg" ng-model="msg" placeholder="Mensagem"></textarea>
-                                <label class="field-icon">
-                                    <i class="fa fa-comments-o"></i>
-                                </label>
-                            </label>
-                        </div>
-                    </div>
-                    <div>
-                        <label id="respostaContato"></label>
-                    </div>
-            </form>
-            </div>
-            <div class="modal-footer bg-light">
-                 <button type="button" class="btn btn-primary" ng-click="SendContact()"><i class="fa fa-check"></i> Enviar</button>
-            </div>
-            </div>
-        </div>
-    </div>    
-</div>    -->
-
-  <!-- End Modal -->
-
-
-
-  <!-- jQuery -->
-  <script src="bower_components\jquery\dist\jquery.min.js"></script>
+<!-- jQuery -->
+ <script src="bower_components\jquery\dist\jquery.min.js"></script>
   <script src="bower_components\jquery-ui\jquery-ui.min.js"></script>
+<!-- Angular -->
+  <script src="bower_components\angular\angular.min.js"></script>
+  <script src="app.js"></script>
 
   <!-- CanvasBG Plugin(creates mousehover effect) -->
   <script src="vendor/plugins/canvasbg/canvasbg.js"></script>

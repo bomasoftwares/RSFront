@@ -3,7 +3,27 @@ span:hover
     background-color:#fc6e51;
 }
 
+.without-border
+{
+    padding-left: 0px !important;
+    padding-right: 0px !important; 
+}
+
 .divform
 {
     opacity: 0.80;
+}
+
+.row{
+    margin-bottom: 5% !important;
+}
+
+.phrase
+{
+    margin-top: 8% !important;
+}
+
+.img-social
+{
+    margin-left: 32% !important;
 }
