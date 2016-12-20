@@ -1,9 +1,9 @@
 .skin-system{
-    /*background-color: #000000 !important;*/
     background-color: #000000 !important;
     background-image: url("img/chamas.png") !important;
     background-repeat: repeat !important;
     background-attachment: fixed !important;
+    height: auto;
 }
 
 .bt-redes-sociais{
@@ -12,8 +12,10 @@
 }
 
 .admin-form{
-    max-width: 500px !important;
+    width: 30% !important;
     margin-top: 0% !important;
+    margin-left: 35%;
+    margin-right: 35%;
 }
 
 /*.gui-input:hover{
@@ -47,4 +49,14 @@
 
 .bm-p21{
     padding: 21px !important;
+}
+
+.pagbody
+{
+   background-color: #000000 !important;
+    background-image: url("img/chamas.png") !important;
+    background-repeat: repeat !important;
+    background-attachment: fixed !important;
+    height: auto;
+
 }

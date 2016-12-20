@@ -2,165 +2,63 @@
 <html ng-app="sexmoveApp">
 
 <head>
-  <!-- Meta, title, CSS, favicons, etc. -->
-  <meta charset="utf-8">
-  <title ng-controller="MainCtrl">{{ appTitle }}</title>
-  <meta name="keywords" content="Sex Move" />
-  <meta name="description" content="Sex Move">
-  <meta name="author" content="Boma Software">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <base href="/">
+    <title>SexMove</title>
+    <meta name="keywords" content="Sex Move" />
+    <meta name="description" content="Sex Move">
+    <meta name="author" content="Boma Software">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Font CSS (Via CDN) -->
-  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
+    <!-- Font CSS (Via CDN) -->
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
 
-  <!-- Theme CSS -->
-  <link rel="stylesheet" type="text/css" href="assets/fonts/zocial/zocial.css">
-  <link rel="stylesheet" type="text/css" href="assets/fonts/glyphicons-pro/glyphicons-pro.css">
-  <link rel="stylesheet" type="text/css" href="assets/fonts/icomoon/icomoon.css">
-  <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
-  <link rel="stylesheet" type="text/css" href="app.css">
-  <link rel="stylesheet" type="text/css" href="index.css">
-  <!-- Admin Forms CSS -->
-  <link rel="stylesheet" type="text/css" href="assets/admin-tools/admin-forms/css/admin-forms.min.css">
+    <!-- Admin Forms CSS -->
+    <link rel="stylesheet" type="text/css" href="../../assets/admin-tools/admin-forms/css/admin-forms.min.css">
 
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="img/B-boma.png">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" type="text/css" href="../../app.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/fonts/zocial/zocial.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/fonts/glyphicons-pro/glyphicons-pro.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/fonts/icomoon/icomoon.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/skin/default_skin/css/theme.css">
+
+    <!-- Boma Css -->
+    <link rel="stylesheet" type="text/css" href="../../login/styles/index.css">
+  
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../img/B-boma.png">
+
+
+    <!-- Jquery -->
+    <script src="../../bower_components\jquery\dist\jquery.min.js"></script>
+
+    <!-- Angular -->
+    <script src="../../bower_components\angular\angular.min.js"></script>
+    <script src="../../bower_components\angular-route\angular-route.min.js"></script>
+
+    <!-- Boma Js -->
+    <script src="../../app.js"></script>
+    <script src="login/controllers/loginCtrl.js"></script>
+
 </head>
 
-<body class="external-page sb-l-c sb-r-c">
+<body ng-controller="sexmoveCtrl" class="skin-system" >
+    <!--Conteúdo da página-->
 
-  <!-- Start: Main -->
-  <div id="main" class="animated fadeIn skin-system">
-
-    <!-- Start: Content-Wrapper -->
-    <section id="content_wrapper">
-
-      <!-- begin canvas animation bg -->
-      <div id="canvas-wrapper">
-        <canvas id="demo-canvas"></canvas>
-      </div>
-
-      <!-- Begin: Content -->
-      <section id="content">
-
-        <div class="admin-form theme-info" id="login1">
-
-          <div class="row mb15 table-layout">
-
-            <div class="col-xs-6 va-m pln">
-              <a href="#">
-                <img src="img/logo.png" title="Logo Movie Sex" class="img-responsive w350" style="margin-bottom:20%;">
-              </a>
-            </div>
-          </div>
-          <!--<div class="row">
-             <div class="col-sm-12 va-b pr5 text-right">
-               <div>
-                     <button class="zocial blogger icon" style="color:white;"></button>
-                     <span class="zocial youtube icon" style="color:white;"></span>
-                     <span class="zocial twitter icon"></span>
-              </div>
-            </div>
-          </div>-->
+    <div ng-view id="page-body" ></div>
 
 
 
+    <!--Rodapé da página-->
+    <div id="page-footer"></div>
+    <!-- jQuery -->
 
 
-          <!-- end .form-header section -->
-          <form>
-            <div class="col-sm-2">
-            </div>
-            <div class="col-sm-9">
-              <div class="row">
-                <label for="username" class="field prepend-icon">
-                        <input type="text" name="username" id="username" class="gui-input" style="background:#DCDCDC;" placeholder="Usuário" title="Entre com o usuário que já foi cadastrado">
-                        <label for="username" class="field-icon">
-                          <i class="fa fa-user"></i>
-                        </label>
-                </label>
-              </div>
-              <!-- end section -->
-
-              <div class="row">
-
-                <label for="password" class="field prepend-icon">
-                        <input type="password" name="password" id="password" class="gui-input" style="background:#DCDCDC;" placeholder="Senha">
-                        <label for="password" class="field-icon">
-                          <i class="fa fa-lock"></i>
-                        </label>
-                </label>
-              </div>
-              <div class="row">
-                <div class="col-sm-6 without-border" style="margin-top:6.5%; margin-bottom:4%;">
-                  <a href="#" style="color:white;">Esqueci a senha</a>
-                </div>
-                <div class="col-sm-6 without-border">
-                  <button type="submit" class="btn-block btn btn-danger">Entrar</button>
-                </div>
-              </div>
-              <div class="row teste">
-                <!--<a href="register.html" class="button btn-success mr10" style="margin-left:30%; margin-top:1%;">Registre-se <b> GRÁTIS </b> por 10 dias !</a>-->
-                <a href="register.html"class="btn-block btn btn-dark">Registre-se <b> GRÁTIS </b> por 10 dias ! </a>
-              </div>
-            </div>
-
-
-            <!--<button type="submit" class="btn-block btn btn-danger" style="margin-top:5%; width:80%;">Registre-se GRÁTIS por 10 dias ! </button>-->
-            <!--<input type="button" class="button" style="background: url('img/btnGratis.png') no-repeat; margin-left:27%; margin-top:5%; width:80%; height:100px;"></input>-->
-            <!--<button type="button" class="button" style="margin-left:30%; margin-top:1%; background-color:#FF8C00; color:white; opacity:0.50; width:52%; height:100%;">Cadastre-se <b> GRÁTIS </b> por 10 dias </button>    -->
-          </form>
-          <br>
-          <br>
-          <div class="col-sm-12 phrase">
-            <img class="img-responsive" src="img/frase.png" style="margin: 0 auto;">
-            <!--<input type="image" src="img/frase.png" style="margin-left:15%; margin-top:15%;">-->
-          </div>
-          <!--<div class="col-sm-12" style="margin-top:5%; margin-left:35%;">-->
-          <div class="col-sm-12 img-social phrase">
-            <a href="https://www.blogger.com/" title="Blog" style="background: transparent; text-decoration:none;">
-              <input type="image" src="img/blog.png" alt="submit" style="padding:2%;">
-            </a>
-
-            <a href="https://www.youtube.com/" title="YouTube" style="background: transparent; text-decoration:none;">
-              <input type="image" src="img/youtube.png" alt="submit" style="padding:2%;">
-            </a>
-
-            <a href="https://twitter.com/" title="Twitter" style="background: transparent;">
-              <input type="image" src="img/twitter.png" alt="submit" style="padding:2%;">
-            </a>
-          </div>
-          <!-- end section -->
-
-        </div>
-  </div>
-  </div>
-
-  <!-- end .form-body section -->
-
-
-  <!-- end .form-footer section -->
-  </form>
-  </div>
-  </div>
-
-  </section>
-  <!-- End: Content -->
-
-  </section>
-  <!-- End: Content-Wrapper -->
-
-  </div>
-
-<!-- jQuery -->
- <script src="bower_components\jquery\dist\jquery.min.js"></script>
-  <script src="bower_components\jquery-ui\jquery-ui.min.js"></script>
-<!-- Angular -->
-  <script src="bower_components\angular\angular.min.js"></script>
-  <script src="app.js"></script>
-
-  <!-- CanvasBG Plugin(creates mousehover effect) -->
-  <script src="vendor/plugins/canvasbg/canvasbg.js"></script>
+    <!-- CanvasBG Plugin(creates mousehover effect) -->
+    <script src="../../vendor/plugins/canvasbg/canvasbg.js"></script>
 
 </body>
 
