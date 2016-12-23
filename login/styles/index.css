@@ -1,6 +1,7 @@
 span:hover
 {
     background-color:#fc6e51;
+    
 }
 
 .without-border
@@ -20,10 +21,11 @@ span:hover
 
 .phrase
 {
-    margin-top: 8% !important;
+    margin-top: 20% !important;
 }
 
 .img-social
 {
     margin-left: 32% !important;
+    margin-top: 5% !important;
 }

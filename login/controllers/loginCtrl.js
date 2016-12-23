@@ -1,9 +1,12 @@
 (function () {
     'use strict';
 
-    angular.module('sexmoveApp')
-        .controller('LoginCtrl', function ($rootScope) {
+    angular.module('sexmoveApp') 
+        .controller('LoginCtrl', function ($rootScope , $scopej, loginService) {  
             $rootScope.appTitle = "Sex Move";
+
+            
+            
         })
         .config(['$routeProvider', '$locationProvider', function (routeProvider, locationProvider) {
 
