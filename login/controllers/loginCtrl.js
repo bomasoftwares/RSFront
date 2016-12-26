@@ -2,16 +2,13 @@
     'use strict';
 
     angular.module('sexmoveApp') 
-        .controller('LoginCtrl', function ($rootScope , $scopej, loginService) {  
-            $rootScope.appTitle = "Sex Move";
-
-            
+        .controller('LoginCtrl', function ($rootScope , $scope) {  
             
         })
+
+        // Configurações de rotas relacionadas
         .config(['$routeProvider', '$locationProvider', function (routeProvider, locationProvider) {
 
-
-            locationProvider.html5Mode(true);
 
             routeProvider.when('/', {
                 templateUrl: 'login/templates/index.html',
@@ -19,11 +16,7 @@
                 name: 'login'
             }).otherwise({ redirectTo: "/" });
 
-            routeProvider.when('/newRegister', {
-                templateUrl: '../../register/templates/register.html',
-                controller: 'LoginCtrl',
-                name: 'newRegister'
-            });
+            
         }]);
 
 
