@@ -1,7 +1,19 @@
-var sexmoveApp = new angular.module('sexmoveApp',
-[]);
+(function () {
+    'use strict';
 
-sexmoveApp.controller('MainCtrl',function($rootScope){
-    $rootScope.appTitle = "Sex Move";
-});
+    angular.module('sexmoveApp', [
+        'ngRoute'
+    ])
+    
+    .controller('sexmoveCtrl', function($scope){
 
+    })
+
+    // Controller principal da aplicação
+     .config(['$routeProvider', '$locationProvider', function (routeProvider, locationProvider) {
+
+
+            locationProvider.html5Mode(true);
+        }]);
+
+})();

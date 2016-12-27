@@ -20,8 +20,7 @@ body.external-page.external-alt #main{
     padding: 10px;
     font-size: 12px;
     font-weight: 400;
-    width: 124px;
-    height: 110px;
+    width: 31%;
     cursor: pointer;
     vertical-align: middle;
     text-align: center;
@@ -108,7 +107,11 @@ body.external-page.external-alt #main{
     width: 419px !important;
 }
 
-
+.footer-message {
+    margin-left: 30% !important;
+    color: #fff !important;
+    
+}
 
 
 

@@ -12,7 +12,7 @@ body, html{
 
 
 .panel-heading{
-    height: 15%;
+    height: 10%;
     padding: 10px;
 }
 
@@ -30,4 +30,13 @@ p{
     -webkit-margin-after: 1em;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
+}
+
+.media-social-links{
+    margin-left: 20% !important;
+    margin-right: 20% !important;
+}
+
+.admin-form{
+    width: auto !important;
 }
