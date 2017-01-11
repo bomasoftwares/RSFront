@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('sexmoveApp').controller('registerCtrl', function ($scope) {
+    angular.module('bmSexMoveApp').controller('registerCtrl', function ($scope) {
 
     })
 

@@ -17,48 +17,45 @@
 </a>
 </div>
 </div>
-
-
-<!-- end .form-header section -->
-<form>
+<form method="POST" name="loginForm">
   <div class="col-sm-2">
   </div>
   <div class="col-sm-9">
     <div class="row">
       <label for="username" class="field prepend-icon">
-        <input type="text" name="username" id="username" class="gui-input" style="background:#DCDCDC;" placeholder="Usuário" title="Entre com o usuário que já foi cadastrado">
-<label for="username" class="field-icon">
-                          <i class="fa fa-user"></i>
-                        </label>
-</label>
-</div>
-<!-- end section -->
-
-<div class="row">
-
-  <label for="password" class="field prepend-icon">
-                        <input type="password" name="password" id="password" class="gui-input" style="background:#DCDCDC;" placeholder="Senha">
-<label for="password" class="field-icon">
-                          <i class="fa fa-lock"></i>
-                        </label>
-</label>
-</div>
+        <input type="text" class="gui-input" ng-model="Model.UserName" ng-required="true" style="background:#DCDCDC;" placeholder="Usuário" title="Entre com o usuário que já foi cadastrado">
+        <label for="username" class="field-icon">
+          <i class="fa fa-user"></i>
+        </label>
+      </label>
+    </div>
+    <div class="row">
+      <label for="password" class="field prepend-icon">
+        <input type="password" ng-model="Model.Password" ng-required="true" class="gui-input" style="background:#DCDCDC;" placeholder="Senha">
+        <label for="password" class="field-icon">
+          <i class="fa fa-lock"></i>
+        </label>
+      </label>
+    </div>
+</form>
 <div class="row">
   <div class="col-sm-6 without-border" style="margin-top:6.5%; margin-bottom:4%;">
-<a href="#" style="color:white;">Esqueci a senha</a>
-</div>
-<div class="col-sm-6 without-border">
-  <button type="submit" class="btn-block btn btn-danger">Entrar</button>
-</div>
+    <a href="#" style="color:white;">Esqueci a senha</a>
+  </div>
+
+  <div class="col-sm-6 without-border">
+    <button ng-href="" class="btn-block btn btn-danger" ng-click="login(loginForm)" ng-disabled="isLoading" >Entrar</button>
+  </div>
 </div>
 <div class="row teste">
-  <!--<a href="register.html" class="button btn-success mr10" style="margin-left:30%; margin-top:1%;">Registre-se <b> GRÁTIS </b> por 10 dias !</a>-->
-  <a href="/register/new" class="btn-block btn btn-dark">Registre-se <b> GRÁTIS </b> por 10 dias ! </a>
+  <a ng-href="/register/new" class="btn-block btn btn-dark" ng-disabled="isLoading">Registre-se <b> GRÁTIS </b> por 10 dias ! </a>
 </div>
 </div>
 
 
-</form>
+
+
+
 <div class="col-sm-12 phrase">
   <img class="img-responsive w350" src="../../img/frase.png" style="margin: 0 auto;">
 <!--<input type="image" src="img/frase.png" style="margin-left:15%; margin-top:15%;">-->

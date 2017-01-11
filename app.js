@@ -1,17 +1,20 @@
 (function () {
     'use strict';
 
-    angular.module('sexmoveApp', [
-        'ngRoute'
+    angular.module('bmSexMoveApp', [
+        'ngRoute'         // Rotas do AngularJS - https://docs.angularjs.org/api/ngRoute
+      , 'ngAnimate'
+      , 'restangular'     // Requisições REST - https://github.com/mgonto/restangular
+      , 'toastr'          // Mensagens(angular-toastr)  - https://github.com/Foxandxss/angular-toastr 
+
     ])
-    
-    .controller('sexmoveCtrl', function($scope){
+    .config(['$routeProvider',  '$locationProvider', 'RestangularProvider',
+     function (routeProvider, locationProvider, RestangularProvider) {
 
-    })
+            // Configurações Restangular
 
-    // Controller principal da aplicação
-     .config(['$routeProvider', '$locationProvider', function (routeProvider, locationProvider) {
-
+            RestangularProvider.setBaseUrl('http://dev-sexmoveapi.boma.com.br');
+            RestangularProvider.setDefaultHeaders({ 'Content-Type': 'application/json' });
 
             locationProvider.html5Mode(true);
         }]);
