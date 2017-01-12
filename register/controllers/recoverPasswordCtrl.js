@@ -6,7 +6,7 @@
     })
         .config(['$routeProvider', function (routeProvider) {
 
-            routeProvider.when('/recoverPassword/recover', {
+            routeProvider.when('/register/recoverPassword', {
                 templateUrl: '../../register/templates/recoverPassword.html',
                 controller: 'recoverPasswordCtrl',
                 name: 'recoverPassword'

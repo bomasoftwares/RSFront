@@ -7,7 +7,7 @@
 
         .config(['$routeProvider', function (routeProvider){
             
-            routeProvider.when('/forgotPassword/forgot',{
+            routeProvider.when('/register/forgotPassword',{
                 templateUrl: '../../register/templates/forgotPassword.html',
                 controller: 'forgotPasswordCtrl',
                 name:'forgotPassword'
