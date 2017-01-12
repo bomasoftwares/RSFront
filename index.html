@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="sexmoveApp">
+<html ng-app="bmSexMoveApp">
 
 <head>
     <!-- Meta, title, CSS, favicons, etc. -->
@@ -24,6 +24,10 @@
     <link rel="stylesheet" type="text/css" href="../../assets/fonts/icomoon/icomoon.css">
     <link rel="stylesheet" type="text/css" href="../../assets/skin/default_skin/css/theme.css">
 
+    <!-- Angular-Toastr Css-->
+    <link rel="stylesheet" type="text/css" href="../../bower_components/angular-toastr/dist/angular-toastr.min.css">
+    
+
     <!-- Boma Css -->
     <link rel="stylesheet" type="text/css" href="../../login/styles/index.css">
   
@@ -32,31 +36,47 @@
     <link rel="shortcut icon" href="../../img/B-boma.png">
 
 
-    <!-- Jquery -->
-    <script src="../../bower_components\jquery\dist\jquery.min.js"></script>
-
     <!-- Angular -->
     <script src="../../bower_components\angular\angular.min.js"></script>
     <script src="../../bower_components\angular-route\angular-route.min.js"></script>
+    <script src="../../bower_components\angular-animate\angular-animate.min.js"></script>
+   
+     <!-- Lodash (Dependencia do Restangular)-->
+    <script src="../../bower_components/lodash/dist/lodash.min.js"></script>
+
+     <!-- Restangular -->
+    <script src="../../bower_components/restangular/dist/restangular.min.js"></script>
+
+    <!-- Angular-Toastr Js -->
+    <script src="../../bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
 
     <!-- Boma Js -->
+
     <script src="../../app.js"></script>
+    <script src="common/factories/interceptors/httpInterceptorFactory.js"></script>
+    <script src="login/services/loginService.js"></script>
+    <script src="common/factories/token/tokenFactory.js"></script>
+    <script src="common/factories/message/messageFactory.js"></script>
+
     <script src="login/controllers/loginCtrl.js"></script>
+    
     <script src="register/controllers/registerCtrl.js"></script>
+<<<<<<< HEAD
     <script src="register/controllers/forgotPasswordCtrl.js"></script>
     <script src="register/controllers/recoverPasswordCtrl.js"></script>
+=======
+
+    
+
+>>>>>>> 4be2a8d1d020a2ab32a3d3afc842a6a436e8e3b2
 </head>
 
-<body ng-controller="sexmoveCtrl" class="skin-system" >
+<body class="skin-system" >
     <!--Conteúdo da página-->
-
     <div ng-view id="page-body"></div>
-
-
 
     <!--Rodapé da página-->
     <div id="page-footer"></div>
-    <!-- jQuery -->
 
 
     <!-- CanvasBG Plugin(creates mousehover effect) -->

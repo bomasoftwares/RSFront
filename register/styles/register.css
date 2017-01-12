@@ -27,15 +27,14 @@ body.external-page.external-alt #main{
     margin-right: 15px;
 }
 
+.account-type:hover{
+    color: #cc0000;
+    border-color: #cc0000;
+}
+
 .account-types{
     margin: 2%;
 }
-
-.account-type:hover{
-    color: #727b7d;
-    border-color: #aeb9bb;
-}
-
 
 .account-type.selected{
     border-color:#cc0000;
