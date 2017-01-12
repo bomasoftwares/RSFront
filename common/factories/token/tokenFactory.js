@@ -2,7 +2,7 @@
 
 (function() {
 
-    angular.module('bmSexMoveApp').factory('tokenFactory', ['$window', function($window) {
+    angular.module('app.factories').factory('tokenFactory', ['$window', function($window) {
 
         var storage = $window.localStorage;
         var tokenName = 'sexMoveToken';

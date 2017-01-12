@@ -2,14 +2,14 @@
 
 (function() {
 
-    angular.module('bmSexMoveApp')
-    .factory('httpInterceptorFactory', ['tokenFactory', '$q', 'messageFactory', function(tokenFactory, $q, messageFactory) {
-
+    angular.module('app.factories')
+    .factory('httpInterceptorFactory', ['$injector','$q', 'tokenFactory', 
+    function($injector, $q, tokenFactory) {
             var requestInterceptor =  {
                 request: function (config) {
 
                     if(config.url.indexOf('sexmoveapi.boma.com.br') < 0){
-                        var token = tokenFactory.getToke();
+                        var token = tokenFactory.getToken();
                         if(token) config.headers.Authorization = "Bearer "+token;
                     }
 

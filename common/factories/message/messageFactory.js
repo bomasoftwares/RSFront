@@ -2,8 +2,7 @@
 
 (function() {
 
-    angular.module('bmSexMoveApp').factory('messageFactory', ['$window', 'toastr', function($window, toastr) {
-
+    angular.module('app.factories').factory('messageFactory', ['$window', 'toastr',   function($window, toastr) {
             var msg = {
 
                 addSuccessMessage: function(text, title) {
