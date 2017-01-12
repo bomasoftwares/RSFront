@@ -1,7 +1,7 @@
 (function(){
     'use strict';
 
-    angular.module('sexmoveApp').controller('forgotPasswordCtrl', function ($scope){
+    angular.module('bmSexMoveApp').controller('forgotPasswordCtrl', function ($scope){
 
     })
 

@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('sexmoveApp').controller('recoverPasswordCtrl', function ($scope) {
+    angular.module('bmSexMoveApp').controller('recoverPasswordCtrl', function ($scope) {
 
     })
         .config(['$routeProvider', function (routeProvider) {

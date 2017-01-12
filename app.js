@@ -10,8 +10,8 @@
 
     ])
     .config(['$routeProvider',  '$locationProvider', 'RestangularProvider',
-             '$httpProvider',
-     function (routeProvider, locationProvider, RestangularProvider, httpProvider) {
+             
+     function (routeProvider, locationProvider, RestangularProvider) {
 
 
             // Configurações de interceptors http
