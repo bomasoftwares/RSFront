@@ -13,11 +13,17 @@
                 name: 'newRegister'
             });
 
-            routeProvider.when('/register/recoveryPassword', {
-                templateUrl: '../../register/templates/register.html',
-                controller: 'registerCtrl',
-                name: 'recoveryPassword'
-            });
+            // routeProvider.when('/register/forgotPassword', {
+            //     templateUrl: '../../register/templates/forgotPassword.html',
+            //     controller: 'registerCtrl',
+            //     name: 'forgotPassword'
+            // });
+
+            // routeProvider.when('/register/recoverPassword', {
+            //     templateUrl: '../../register/templates/recoverPassword.html',
+            //     controller: 'registerCtrl',
+            //     name: 'recoverPassword'
+            // });
 
             routeProvider.when('/register/terms', {
                 templateUrl: 'terms/templates/index.html',
