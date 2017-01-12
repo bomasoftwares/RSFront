@@ -37,6 +37,9 @@
             // cfpLoadingBarProvider.parentSelector = '#loading-bar-container';
             // // cfpLoadingBarProvider.spinnerTemplate = '<div><span class="fa fa-spinner">Custom Loading Message...</div>'; 
 
+
+
+            routeProvider.otherwise('/');
             locationProvider.html5Mode(true);
         }]);
 
