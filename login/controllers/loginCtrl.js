@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('bmSexMoveApp') 
+    angular.module('bmSexMoveLoginApp') 
         .controller('loginCtrl',  ['$scope', 'loginService', 'messageFactory', '$location',
         function ($scope , loginService, message, location) {  
 
@@ -27,14 +27,4 @@
             initializer();
             
         }])
-
-        // Configurações de rotas relacionadas
-        .config(['$routeProvider', '$locationProvider', function (routeProvider, locationProvider) {
-
-            routeProvider.when('/', {
-                templateUrl: 'login/templates/index.html',
-                controller: 'loginCtrl',
-                name: 'login'
-            }).otherwise('/');
-        }]);
 })();    

@@ -2,26 +2,34 @@
     'use strict';
 
     angular
-        .module('bmSexMoveApp')
+        .module('bmSexMoveLoginApp')
         .service("loginService", ["$http", "Restangular","tokenFactory", function($http, Restangular, tokenFactory) {
             
-            this.getToken = function(userName, password) {
+            var baseAccounts = Restangular.all('accounts');
 
-                var content = 
-                "grant_type=password"+
-                "&username="+convertToFormUrlEncoded(userName)+
-                "&password="+convertToFormUrlEncoded(password);
-                
-                return Restangular
-                    .allUrl("token",Restangular.configuration.baseUrl+"/token")
-                    .customPOST(content,"",{},{ 'Content-Type': 'application/x-www-form-urlencoded'})
-                    .then(function(result){
-                        tokenFactory.setToken(result.access_token);
-                    }
-                    , function(error){
-                        throw error;
-                    });
+
+            var service = {
+
+                getToken: function(userName, password) {
+
+                    var content = 
+                    "grant_type=password"+
+                    "&username="+convertToFormUrlEncoded(userName)+
+                    "&password="+convertToFormUrlEncoded(password);
+                    
+                    return Restangular
+                        .allUrl("token",Restangular.configuration.baseUrl+"/token")
+                        .customPOST(content,"",{},{ 'Content-Type': 'application/x-www-form-urlencoded'})
+                        .then(function(result){
+                            tokenFactory.setToken(result.access_token);
+                        }
+                        , function(error){
+                            throw error;
+                        });
+                }
             }
+
+            this.getToken = 
 
             function convertToFormUrlEncoded(str) {
                     return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
