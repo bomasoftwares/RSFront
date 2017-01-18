@@ -10,6 +10,7 @@
                         templateUrl: 'users/templates/userHomeTemplate.html',
                         controller: 'userHomeCtrl',
                         name: 'userHome'
-                    })
+                    });
+                
         }]);
 })();
