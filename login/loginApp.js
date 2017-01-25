@@ -22,10 +22,6 @@
     .config(['$routeProvider', 'RestangularProvider', '$httpProvider',
      function (routeProvider, RestangularProvider, httpProvider) {
 
-
-            // Configurações de interceptors http
-            httpProvider.interceptors.push('httpInterceptorFactory');
-
             // Configurações Restangular
             RestangularProvider.setBaseUrl('http://dev-sexmoveapi.boma.com.br');
             RestangularProvider.setDefaultHeaders({ 'Content-Type': 'application/json' });

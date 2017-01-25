@@ -5,36 +5,29 @@
         .module('bmSexMoveLoginApp')
         .service("loginService", ["$http", "Restangular","tokenFactory", function($http, Restangular, tokenFactory) {
             
-            var baseAccounts = Restangular.all('accounts');
-
-
-            var service = {
-
-                getToken: function(userName, password) {
-
-                    var content = 
+            function _getToken(nickName, password){
+                var content = 
                     "grant_type=password"+
-                    "&username="+convertToFormUrlEncoded(userName)+
+                    "&username="+convertToFormUrlEncoded(nickName)+
                     "&password="+convertToFormUrlEncoded(password);
                     
                     return Restangular
                         .allUrl("token",Restangular.configuration.baseUrl+"/token")
-                        .customPOST(content,"",{},{ 'Content-Type': 'application/x-www-form-urlencoded'})
-                        .then(function(result){
-                            tokenFactory.setToken(result.access_token);
-                        }
-                        , function(error){
-                            throw error;
-                        });
-                }
+                        .customPOST(content,"",{},{ 'Content-Type': 'application/x-www-form-urlencoded'});
             }
 
-            this.getToken = 
+            var service = {
+                 getToken: function (nickName, password) {
+                    return _getToken(nickName, password);
+                }
+            }
 
             function convertToFormUrlEncoded(str) {
                     return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
                         return '%' + c.charCodeAt(0).toString(16);
                     }).replace(/%20/g, "+");
             }
+
+            return service;
         }]);
 })();

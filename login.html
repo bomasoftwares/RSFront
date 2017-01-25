@@ -52,21 +52,14 @@
   <!-- Boma Js -->
 
   <script src="login/loginApp.js"></script>
+  <script src="common/factories/message/messageFactory.js"></script>
   <script src="login/services/loginService.js"></script>
   <script src="common/factories/token/tokenFactory.js"></script>
-  <script src="common/factories/message/messageFactory.js"></script>
-  <script src="common/factories/interceptors/httpInterceptorFactory.js"></script>
-
-
   <script src="login/controllers/loginCtrl.js"></script>
-
-  <script src="account/controllers/newAccountCtrl.js"></script>
-  <script src="account/controllers/forgotPasswordCtrl.js"></script>
-  <script src="account/controllers/recoverPasswordCtrl.js"></script>
 
 </head>
 
-<body class="skin-system">
+<body class="skin-system" ng-app="bmSexMoveLoginApp" ng-controller="loginCtrl">
 
 
   <div class="external-page sb-l-c sb-r-c">

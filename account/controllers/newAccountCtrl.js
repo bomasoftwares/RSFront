@@ -22,7 +22,8 @@
                     "&username="+convertToFormUrlEncoded(nickName)+
                     "&password="+convertToFormUrlEncoded(password);
                     
-                    return Restangular
+                    return 
+                    Restangular
                         .allUrl("token",Restangular.configuration.baseUrl+"/token")
                         .customPOST(content,"",{},{ 'Content-Type': 'application/x-www-form-urlencoded'})
                         .then(function(result){
