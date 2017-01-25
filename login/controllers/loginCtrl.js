@@ -22,6 +22,7 @@
                     if(token){
                         messageFactory.addSuccessMessage('Login feito com sucesso');
                         $scope.isLoading = false;
+                        window.location.href="/index.html";
                     }
                     })
                     .catch(function(response){

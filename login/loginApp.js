@@ -19,12 +19,14 @@
       , 'restangular'            // Restangular REST - https://github.com/mgonto/restangular
     ])
     
-    .config(['$routeProvider', 'RestangularProvider', '$httpProvider',
-     function (routeProvider, RestangularProvider, httpProvider) {
+    .config(['$routeProvider', 'RestangularProvider', '$httpProvider', 
+     function (routeProvider, RestangularProvider, httpProvider ) {
 
             // Configurações Restangular
             RestangularProvider.setBaseUrl('http://dev-sexmoveapi.boma.com.br');
             RestangularProvider.setDefaultHeaders({ 'Content-Type': 'application/json' });
+
+            
 
            
         }]);
