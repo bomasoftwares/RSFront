@@ -5,8 +5,14 @@
         .controller('loginCtrl',  ['$scope', 'loginService', 'messageFactory', '$location','tokenFactory',
         function ($scope , loginService, messageFactory, location, tokenFactory) {  
 
+            var token = tokenFactory.getToken();
+            var isAuthenticated = token != undefined && token != null;
+
             function initializer(){
                 $scope.isLoading = false;
+
+                if(token) window.location.href="/index.html";
+
             }
 
             $scope.login = function(form){

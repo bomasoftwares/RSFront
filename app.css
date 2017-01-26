@@ -62,3 +62,12 @@
     height: auto;
 
 }
+
+.navbar-dark{
+    background-color: #2E313D !important;
+}
+
+.global-header{
+    padding-top: 5%;
+}
+

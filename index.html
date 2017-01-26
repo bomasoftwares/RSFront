@@ -5,7 +5,7 @@
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
     <base href="/">
-    <title>SexMove Index - logado</title>
+    <title>SexMove Index</title>
     <meta name="keywords" content="Sex Move" />
     <meta name="description" content="Sex Move">
     <meta name="author" content="Boma Software">
@@ -43,6 +43,10 @@
     <script src="../../bower_components\angular\angular.min.js"></script>
     <script src="../../bower_components\angular-route\angular-route.min.js"></script>
     <script src="../../bower_components\angular-animate\angular-animate.min.js"></script>
+
+    <!--Angular Strap-->
+    <script src="../../bower_components\angular-strap\dist\angular-strap.min.js"></script>
+    <script src="../../bower_components\angular-strap\dist\angular-strap.tpl.min.js"></script>
    
      <!-- Lodash (Dependencia do Restangular)-->
     <script src="../../bower_components/lodash/dist/lodash.min.js"></script>
@@ -56,31 +60,31 @@
 
     <!-- Boma Js -->
     <script src="../../app.js"></script>
-    <script src="login/services/loginService.js"></script>
     <script src="common/factories/token/tokenFactory.js"></script>
     <script src="common/factories/message/messageFactory.js"></script>
     <script src="common/factories/interceptors/httpInterceptorFactory.js"></script>
-
-
-    <script src="login/controllers/loginCtrl.js"></script>
     
-    <script src="register/controllers/registerCtrl.js"></script>
-    <script src="users/controllers/userHomeCtrl.js"></script>
-    <script src="register/controllers/forgotPasswordCtrl.js"></script>
-    <script src="register/controllers/recoverPasswordCtrl.js"></script>
+    <script src="common/directives/globalSearchDirective.js"></script>
 
+
+    <script src="users/controllers/userHomeCtrl.js"></script>
 
     <!--Configurações de Rotas -->
     <script src="users/userRoute.js"></script>
+
+    
+    
     
 </head>
 
 <body class="skin-system" >
+
+    <div ng-include="'common/header/templates/headerTemplate.html'"></div>
     <!--Conteúdo da página-->
     <div ng-view id="page-body"></div>
 
     <!--Rodapé da página-->
-    <div id="page-footer"></div>
+    <div ng-include="'common/footer/templates/footerTemplate.html'"></div>
 
 
     <!-- CanvasBG Plugin(creates mousehover effect) -->
