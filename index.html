@@ -29,8 +29,8 @@
 
    
     <!-- Boma Css -->
-    <link rel="stylesheet" type="text/css" href="../../login/styles/index.css">
-
+    <link rel="stylesheet" type="text/css" href="common/styles/globalSearch.css"/>
+    
     <!-- Octicon Css -->
     <link rel="stylesheet" type="text/css" href="../../assets/fonts/icomoon/icomoon.css">
   
@@ -71,20 +71,19 @@
 
     <!--Configurações de Rotas -->
     <script src="users/userRoute.js"></script>
-
-    
-    
-    
 </head>
 
-<body class="skin-system" >
+<body>
 
-    <div ng-include="'common/header/templates/headerTemplate.html'"></div>
+    <div ng-include="'common/templates/headerTemplate.html'"></div>
+
+    <div ng-include="'common/templates/leftMenuTemplate.html'"></div>
+    
     <!--Conteúdo da página-->
     <div ng-view id="page-body"></div>
 
     <!--Rodapé da página-->
-    <div ng-include="'common/footer/templates/footerTemplate.html'"></div>
+    <!--<div ng-include="'common/footer/templates/footerTemplate.html'"></div>-->
 
 
     <!-- CanvasBG Plugin(creates mousehover effect) -->

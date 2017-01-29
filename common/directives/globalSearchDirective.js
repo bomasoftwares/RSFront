@@ -12,8 +12,22 @@
                 scope: {
                     'data': '=data'
                 },
-                controller: ['$rootScope','$scope', 
-                function ($rootScope, $scope) {
+                controller: ['$rootScope','$scope', '$element', 
+                function ($rootScope, $scope, $element) {
+                    $scope.showSearch = false;
+
+
+                    $scope.openSearch = function(){
+                        if(!$scope.showSearch)
+                        $scope.showSearch = true;
+                        $scope.textToSearch = '';
+                    }
+
+                    $scope.closeSearch = function(){
+                        $scope.textToSearch = '';
+                        $scope.showSearch = false;   
+                        
+                    }
                    
                 }],
                 link: function ($scope, element) {

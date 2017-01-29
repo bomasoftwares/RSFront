@@ -1,8 +1,15 @@
-<div class="form-group has-primary">
-    <div class="col-lg-12">
-        <span class="append-icon right">
-            <i class="fa fa-search"></i>
-        </span>
-        <input type="text" class="form-control" placeholder="Tá procurando algo?">
-    </div>
-</div>
+<ul class="nav navbar-nav">
+    <li>
+        <a href="#" ng-click="openSearch()" id="global-search-button" ng-if="showSearch == false" class="global-search-icon"> 
+            <!--//ng-mousedown="search()" para iniciar buscas-->
+            <span class="glyphicon glyphicon-search"></span>
+        </a>
+        <input 
+            type="text"
+            class="global-serch-input form-control fadeIn fadeOut"
+            ng-show="showSearch == true"
+            ng-blur="closeSearch()"
+            ng-model="textToSearch"
+            placeholder="O que você procura?">
+    </li>
+</ul>
