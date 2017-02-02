@@ -6,11 +6,12 @@
         .config(["$routeProvider", function($routeProvider) {
             
             $routeProvider
-                .when('/users/home', {
-                        templateUrl: 'users/templates/userHomeTemplate.html',
+                .when('/user/home', {
+                        templateUrl: 'user/templates/userHomeTemplate.html',
                         controller: 'userHomeCtrl',
                         name: 'userHome'
-                    });
+                    })
+                .otherwise('/user/home');
                 
         }]);
 })();

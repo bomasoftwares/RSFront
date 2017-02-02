@@ -17336,6 +17336,7 @@ body {
   position: relative;
   left: 0px;
   margin-left: 250px;
+  margin-top: 60px;
 }
 /* Transitions */
 body.onload-check .navbar,

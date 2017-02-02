@@ -24,7 +24,7 @@
 
       
     ])
-    .config(['$routeProvider',  '$locationProvider', 'RestangularProvider', '$httpProvider',
+    .config(['$routeProvider',  '$locationProvider', 'RestangularProvider', '$httpProvider',  
      function (routeProvider, locationProvider, RestangularProvider, httpProvider) {
 
 
@@ -37,14 +37,7 @@
             
             RestangularProvider.setDefaultHeaders({ 'Content-Type': 'application/json' });
 
-            // Configura barra de loading
-            // cfpLoadingBarProvider.includeSpinner = true;
-            // cfpLoadingBarProvider.parentSelector = '#loading-bar-container';
-            // // cfpLoadingBarProvider.spinnerTemplate = '<div><span class="fa fa-spinner">Custom Loading Message...</div>'; 
-
-
-
-            routeProvider.otherwise('/');
+            routeProvider.otherwise('/user/home');
             locationProvider.html5Mode(true);
         }]);
 
