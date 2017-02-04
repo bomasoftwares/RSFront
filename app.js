@@ -32,8 +32,8 @@
             httpProvider.interceptors.push('httpInterceptorFactory');
 
             // Configurações Restangular
-            // RestangularProvider.setBaseUrl('http://dev-sexmoveapi.boma.com.br');
-            RestangularProvider.setBaseUrl('http://localhost:61104/');
+            RestangularProvider.setBaseUrl('http://dev-sexmoveapi.boma.com.br');
+            // RestangularProvider.setBaseUrl('http://localhost:61104/');
             
             RestangularProvider.setDefaultHeaders({ 'Content-Type': 'application/json' });
 
