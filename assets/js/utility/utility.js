@@ -616,7 +616,6 @@
                var mobile = (controlW + titleW);
                arr[ID] = mobile;
             });
-            console.log(arr)
 
             $.each(arr, function(i, e) {
 

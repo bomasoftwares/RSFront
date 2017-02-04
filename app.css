@@ -62,3 +62,24 @@
     height: auto;
 
 }
+
+.bm-bg-dark{
+    background-color: #2E313D !important;
+}
+
+.global-header{
+    padding-top: 5%;
+}
+
+.global-search{
+    font-size: 14px;
+    display: inline-block;
+    margin: 11px 16px 0 16px;
+    font-size: 16px;
+    z-index:11;
+    cursor: pointer;
+}
+
+
+
+

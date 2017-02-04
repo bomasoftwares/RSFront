@@ -15,6 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "animate.css": "^3.5.2"
+    "animate.css": "^3.5.2",
+    "angular-strap": "^2.3.10"
   }
 }

@@ -5,6 +5,8 @@
     angular.module('app.factories', [
         'toastr'          // Mensagens(angular-toastr)  - https://github.com/Foxandxss/angular-toastr 
     ]);
+    angular.module('app.directives', []);
+    
 
     angular.module('bmSexMoveApp', [
 
@@ -14,10 +16,11 @@
 
       // Internal modules
       , 'app.factories'
+      , 'app.directives'
 
       // External modules
       , 'restangular'            // Restangular REST - https://github.com/mgonto/restangular
-    //   , 'angular-loading-bar'    // Loading quando houver requisições (https://github.com/chieffancypants/angular-loading-bar)
+      , 'mgcrea.ngStrap'         // Angular-Strap -  http://mgcrea.github.io/angular-strap/
 
       
     ])
