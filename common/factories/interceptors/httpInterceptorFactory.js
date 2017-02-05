@@ -7,8 +7,11 @@
     function($injector, $q, tokenFactory) {
             var requestInterceptor =  {
                 request: function (config) {
+                    var token = tokenFactory.getToken();
 
-                    if(config.url.indexOf('sexmoveapi.boma.com.br') < 0){
+                    if(!token) window.location.url = "../login.html";
+
+                    if(config.url.indexOf('sexmoveapi.boma.com.br') > 0){
                         var token = tokenFactory.getToken();
                         if(token) config.headers.Authorization = "Bearer "+token;
                     }

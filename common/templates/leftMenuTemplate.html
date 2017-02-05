@@ -1,4 +1,5 @@
-<aside id="sidebar_left" class="nano nano-light affix">
+
+<aside id="sidebar_left" class="nano nano-light affix" ng-controller="leftMenuCtrl">
 
       <!-- Start: Sidebar Left Content -->
       <div class="sidebar-left-content nano-content">
@@ -12,9 +13,9 @@
               <a class="media-left" href="#">
                 <img src="assets/img/avatars/1.jpg" class="img-responsive">
               </a>
-              <div class="media-body">
+              <div class="media-body" >
                 <div class="media-links">
-                   <a href="#" class="sidebar-menu-toggle">Editar Perfil - </a> <a href="pages_login(alt).html">Sair</a>
+                   <a href="#" class="sidebar-menu-toggle">Editar Perfil - </a> <a href="" ng-click="logout()">Sair</a>
                 </div>
                 <div class="media-author">Frank Sinatra</div>
               </div>
@@ -48,7 +49,7 @@
               <span class="sidebar-title">Vídeos</span>
             </a>
           </li>
-          <li class="active">
+          <li>
             <a href="#">
                <span class="fa fa-ticket"></span>
                <span class="sidebar-title">Eventos</span>
@@ -106,3 +107,4 @@
       <!-- End: Sidebar Left Content -->
 
     </aside>
+

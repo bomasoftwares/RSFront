@@ -10,8 +10,7 @@
                         templateUrl: 'user/templates/userHomeTemplate.html',
                         controller: 'userHomeCtrl',
                         name: 'userHome'
-                    })
-                .otherwise('/user/home');
+                    });
                 
         }]);
 })();
