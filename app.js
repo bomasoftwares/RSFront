@@ -39,7 +39,8 @@
             routeProvider.otherwise('/user/home');
             locationProvider.html5Mode(true);
 
-            cfpLoadingBarProvider.includeSpinner = false;
+            cfpLoadingBarProvider.includeSpinner = true;
+            cfpLoadingBarProvider.latencyThreshold = 100;
         }]);
 
 })();
