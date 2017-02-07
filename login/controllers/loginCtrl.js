@@ -26,7 +26,6 @@
                     var token = tokenFactory.getToken();
 
                     if(token){
-                        messageFactory.addSuccessMessage('Login feito com sucesso');
                         $scope.isLoading = false;
                         window.location.href="/index.html";
                     }
@@ -35,7 +34,7 @@
                         if(response.status == "400" || response.data.error_description != undefined)
                             messageFactory.addErrorMessage('Usuário ou senha inválidos');
                         else{
-                            messageFactory.addErrorMessage('Ocorreu umm erro inesperado: ');
+                            messageFactory.addErrorMessage('Ocorreu umm erro inesperado');
                             console.log('Erro: '+response.data);
                         }
 

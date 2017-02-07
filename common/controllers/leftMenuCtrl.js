@@ -13,6 +13,7 @@
         $scope.logout = function(){
             userService.logout().then(function(response){
                 tokenFactory.removeToken();
+                window.location.href = "http://sexmove-dev.boma.com.br/login.html";        
             }).catch(function(response){
                 messageFactory.addErrorMessage('Erro ao fazer logout');
             });

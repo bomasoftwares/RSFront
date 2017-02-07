@@ -21,11 +21,11 @@
       // External modules
       , 'restangular'            // Restangular REST - https://github.com/mgonto/restangular
       , 'mgcrea.ngStrap'         // Angular-Strap -  http://mgcrea.github.io/angular-strap/
-
+      , 'angular-loading-bar'    // Angular Loading Bar - https://github.com/chieffancypants/angular-loading-bar
       
     ])
-    .config(['$routeProvider',  '$locationProvider', 'RestangularProvider', '$httpProvider',  
-     function (routeProvider, locationProvider, RestangularProvider, httpProvider) {
+    .config(['$routeProvider',  '$locationProvider', 'RestangularProvider', '$httpProvider', 'cfpLoadingBarProvider',  
+     function (routeProvider, locationProvider, RestangularProvider, httpProvider, cfpLoadingBarProvider) {
 
 
             // Configurações de interceptors http
@@ -38,6 +38,8 @@
 
             routeProvider.otherwise('/user/home');
             locationProvider.html5Mode(true);
+
+            cfpLoadingBarProvider.includeSpinner = false;
         }]);
 
 })();
