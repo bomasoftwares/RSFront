@@ -24,7 +24,7 @@
       , 'angular-loading-bar'    // Angular Loading Bar - https://github.com/chieffancypants/angular-loading-bar
       
     ])
-    .config(['$routeProvider',  '$locationProvider', 'RestangularProvider', '$httpProvider', 'cfpLoadingBarProvider',  
+    .config(['$routeProvider',  '$locationProvider', 'RestangularProvider', '$httpProvider', 'cfpLoadingBarProvider',    
      function (routeProvider, locationProvider, RestangularProvider, httpProvider, cfpLoadingBarProvider) {
 
 
@@ -36,7 +36,6 @@
             
             RestangularProvider.setDefaultHeaders({ 'Content-Type': 'application/json' });
 
-            routeProvider.otherwise('/user/home');
             locationProvider.html5Mode(true);
 
             cfpLoadingBarProvider.includeSpinner = true;

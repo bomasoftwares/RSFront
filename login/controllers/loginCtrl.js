@@ -2,8 +2,8 @@
     'use strict';
 
     angular.module('bmSexMoveLoginApp') 
-        .controller('loginCtrl',  ['$scope', 'loginService', 'messageFactory', '$location','tokenFactory',
-        function ($scope , loginService, messageFactory, location, tokenFactory) {  
+        .controller('loginCtrl',  ['$scope', 'loginService', 'messageFactory', '$location','tokenFactory', '$window',
+        function ($scope , loginService, messageFactory, location, tokenFactory, $window) {  
 
             var token = tokenFactory.getToken();
             var isAuthenticated = token != undefined && token != null;
@@ -27,7 +27,7 @@
 
                     if(token){
                         $scope.isLoading = false;
-                        window.location.href="/index.html";
+                        $window.location = "/index.html";
                     }
                     })
                     .catch(function(response){
