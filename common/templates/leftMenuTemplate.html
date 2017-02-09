@@ -11,13 +11,13 @@
           <div class="sidebar-widget author-widget">
             <div class="media">
               <a class="media-left" href="#">
-                <img src="assets/img/avatars/1.jpg" class="img-responsive">
+                <img src="img/batman-small.png" class="img-responsive">
               </a>
               <div class="media-body" >
                 <div class="media-links">
-                   <a href="#" class="sidebar-menu-toggle">Editar Perfil - </a> <a href="" ng-click="logout()">Sair</a>
+                   <a ng-href="/user/edit">Editar Perfil</a> - <a href="" ng-click="logout()">Sair</a>
                 </div>
-                <div class="media-author">Frank Sinatra</div>
+                <div class="media-author">{{ user.UserName}}</div>
               </div>
             </div>
           </div>

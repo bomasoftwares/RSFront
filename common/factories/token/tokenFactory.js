@@ -6,6 +6,7 @@
 
         var storage = $window.localStorage;
         var tokenName = 'sexMoveToken';
+        var tokenUserName = 'sexMoveUser';
 
         var token = {
             setToken: function(value) {
@@ -18,6 +19,13 @@
 
             removeToken: function() {
                 storage.removeItem(tokenName);  
+                storage.removeItem(tokenUserName);  
+            },
+            setUserToken: function(userObject){
+                storage.setItem(tokenUserName, userObject);
+            },
+            getUserToken: function(){
+                return storage.getItem(tokenUserName);
             }
         };
 

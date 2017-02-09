@@ -17,18 +17,19 @@
 
         // External modules
       , 'restangular'            // Restangular REST - https://github.com/mgonto/restangular
+      , 'angular-loading-bar'    // Angular Loading Bar - https://github.com/chieffancypants/angular-loading-bar
     ])
     
-    .config(['$routeProvider', 'RestangularProvider', '$httpProvider', 
-     function (routeProvider, RestangularProvider, httpProvider ) {
+    .config(['$routeProvider', 'RestangularProvider', '$httpProvider', 'cfpLoadingBarProvider',  
+     function (routeProvider, RestangularProvider, httpProvider, cfpLoadingBarProvider) {
 
-            // Configurações Restangular
-            RestangularProvider.setBaseUrl('http://dev-sexmoveapi.boma.com.br');
-            RestangularProvider.setDefaultHeaders({ 'Content-Type': 'application/json' });
-
+        // Configurações Restangular
+        RestangularProvider.setBaseUrl('http://dev-sexmoveapi.boma.com.br');
+        RestangularProvider.setDefaultHeaders({ 'Content-Type': 'application/json' });
             
-
+        cfpLoadingBarProvider.includeSpinner = true;
+        cfpLoadingBarProvider.latencyThreshold = 100;
            
-        }]);
+     }]);
 
 })();

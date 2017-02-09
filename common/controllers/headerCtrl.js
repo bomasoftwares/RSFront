@@ -1,8 +1,8 @@
 (function () {
     'use strict';
 
-    angular.module('bmSexMoveApp').controller('leftMenuCtrl',['tokenFactory','$location', 'messageFactory', '$scope', 'userService',
-     function (tokenFactory, location, messageFactory, $scope, userService) {
+    angular.module('bmSexMoveApp').controller('headerCtrl',['tokenFactory', 'messageFactory', '$scope', 'userService',
+     function (tokenFactory, messageFactory, $scope, userService) {
 
         var userToken = tokenFactory.getUserToken();
         $scope.user = {};
@@ -32,18 +32,6 @@
             $scope.getUserInfo();
 
         }
-
-        $scope.logout = function(){
-            userService.logout().then(function(response){
-                tokenFactory.removeToken();
-                window.location.href = "http://sexmove-dev.boma.com.br/login.html";        
-            }).catch(function(response){
-                messageFactory.addErrorMessage('Erro ao fazer logout');
-            });
-        };
-
-
-        
 
         init();
     }]);

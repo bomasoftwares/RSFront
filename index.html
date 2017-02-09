@@ -5,7 +5,7 @@
   <!-- Meta, title, CSS, favicons, etc. -->
   <meta charset="utf-8">
   <title>SexMove Index</title>
-  <base href="/">
+  <base href="/index.html">
   <meta name="keywords" content="HTML5 Bootstrap 3 Admin Template UI Theme" />
   <meta name="description" content="AbsoluteAdmin - A Responsive HTML5 Admin UI Framework">
   <meta name="author" content="AbsoluteAdmin">
@@ -23,6 +23,8 @@
   <!-- Admin Forms CSS -->
   <link rel="stylesheet" type="text/css" href="assets/admin-tools/admin-forms/css/admin-forms.min.css">
 
+  <!-- Angular-Loading Bar Js -->
+  <link rel="stylesheet" type="text/css" href="../../bower_components/angular-loading-bar/build/loading-bar.min.css">
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="../../img/B-boma.png">
@@ -83,6 +85,9 @@
 <!-- Angular-Toastr Js -->
 <script src="../../bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
 
+<!-- Angular-Loading Bar Js -->
+<script src="../../bower_components/angular-loading-bar/build/loading-bar.min.js"></script>
+
 
 
 <!-- Boma Js -->
@@ -93,13 +98,15 @@
 <script src="common/directives/globalSearchDirective.js"></script>
 <script src="user/services/userService.js"></script>
 
+<!--Configurações de Rotas -->
+<script src="user/userRoute.js"></script>
+
 <!-- Controllers -->
 <script src="user/controllers/userHomeCtrl.js"></script>
 <script src="common/controllers/leftMenuCtrl.js"></script>
+<script src="common/controllers/headerCtrl.js"></script>
+<script src="user/controllers/userEditCtrl.js"></script>
 
-
-<!--Configurações de Rotas -->
-<script src="user/userRoute.js"></script>
 
 <!--jQuery -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
