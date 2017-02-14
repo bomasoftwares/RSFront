@@ -6,10 +6,6 @@
     })
         .config(['$routeProvider', function (routeProvider) {
 
-            routeProvider.when('/account/recoverPassword', {
-                templateUrl: '../../account/templates/recoverPassword.html',
-                controller: 'recoverPasswordCtrl',
-                name: 'recoverPassword'
-            });
+            
         }]);
 })();
