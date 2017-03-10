@@ -16,6 +16,11 @@
                         controller: 'userEditCtrl',
                         name: 'userEdit'
                 })
+                .when('/user/newsfeed', {
+                        templateUrl: 'user/templates/userNewsFeed.html',
+                        controller: 'userNewsFeedCtrl',
+                        name: 'userNewsFeed'
+                })
                 .otherwise({
                         redirectTo: '/user/home'
                 });;
