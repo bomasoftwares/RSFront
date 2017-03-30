@@ -3,11 +3,15 @@
 
     angular.module('bmSexMoveApp').controller('userEditCtrl', ['$scope','tokenFactory', function ($scope, tokenFactory) {
 
-        
+        var vm = this;
+
+
         //Método de inicialização
         function init(){
             $scope.getUserData();
         }
+
+
 
 
         $scope.getUserData = function(){

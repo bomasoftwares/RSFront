@@ -7543,8 +7543,10 @@ body.panel-fullscreen-active #content_wrapper {
   margin-right: -8px;
   background: rgba(0, 0, 0, 0.028);
   border-left: 1px solid rgba(0, 0, 0, 0.06);
+  height: 100%;
 }
 .panel-controls > a {
+  overflow: hidden;
   padding-top: 1px;
   display: inline-block;
   opacity: 0.7;
@@ -7557,9 +7559,9 @@ body.panel-fullscreen-active #content_wrapper {
 .panel-controls > a:hover {
   text-decoration: none;
   opacity: 1;
+  overflow: hidden;
 }
 /* Icon colors for panel contextuals */
-.panel-primary .panel-controls > a,
 .panel-info .panel-controls > a,
 .panel-success .panel-controls > a,
 .panel-warning .panel-controls > a,
@@ -7805,6 +7807,7 @@ body.panel-fullscreen-active #content_wrapper {
 .panel.panel-alert .panel-tabs > li > a:hover,
 .panel.panel-system .panel-tabs > li > a:hover,
 .panel.panel-dark .panel-tabs > li > a:hover {
+  color: #1d6fa5;
   color: #FFF !important;
   color: #ffffff !important;
 }
@@ -16966,6 +16969,9 @@ ol.timeline-list li.timeline-item .timeline-date {
 }
 .mw100 {
   max-width: 100px !important;
+}
+.mw115{
+  max-width: 115px !important;
 }
 .mw140 {
   max-width: 140px !important;

@@ -1,74 +1,561 @@
-<section id="content" class="animated fadeIn">
 
-        <!-- Begin .page-heading -->
-        <div class="page-heading">
-            <div class="media clearfix">
-              <div class="media-left pr30">
-                <a href="#">
-                  <img class="media-object mw150" src="img/batman-profile.jpg" >
+
+
+<!-- Admin Forms CSS -->
+<link rel="stylesheet" type="text/css" href="../../assets/admin-tools/admin-forms/css/admin-forms.css">
+
+<section id="content" class="animated fadeIn">
+  <!-- Begin .page-heading -->
+  <div class="page-heading">
+      <div class="media clearfix">
+        <div class="media-left pr30">
+          <a href="#">
+            <img class="media-object mw115" src="img/batman-profile.jpg" >
+          </a>
+        </div>                      
+        <div class="media-body va-m">
+          <h2 class="media-heading">{{ Model.UserName}}
+          </h2>
+          <p class="lead">{{Model.Email}}</p>
+          <div class="media-links">
+            <ul class="list-inline list-unstyled">
+              <li>
+                <a href="#" title="facebook link">
+                  <span class="fa fa-facebook-square fs35 text-primary"></span>
                 </a>
-              </div>                      
-              <div class="media-body va-m">
-                <h2 class="media-heading">{{ Model.UserName}}
-                  <small>- Profile</small>
-                </h2>
-                <p class="lead">{{Model.Email}}</p>
-                <div class="media-links">
-                  <ul class="list-inline list-unstyled">
-                    <li>
-                      <a href="#" title="facebook link">
-                        <span class="fa fa-facebook-square fs35 text-primary"></span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" title="twitter link">
-                        <span class="fa fa-twitter-square fs35 text-info"></span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" title="google plus link">
-                        <span class="fa fa-google-plus-square fs35 text-danger"></span>
-                      </a>
-                    </li>
-                    <li class="hidden">
-                      <a href="#" title="behance link">
-                        <span class="fa fa-behance-square fs35 text-primary"></span>
-                      </a>
-                    </li>
-                    <li class="hidden">
-                      <a href="#" title="pinterest link">
-                        <span class="fa fa-pinterest-square fs35 text-danger-light"></span>
-                      </a>
-                    </li>
-                    <li class="hidden">
-                      <a href="#" title="linkedin link">
-                        <span class="fa fa-linkedin-square fs35 text-info"></span>
-                      </a>
-                    </li>
-                    <li class="hidden">
-                      <a href="#" title="github link">
-                        <span class="fa fa-github-square fs35 text-dark"></span>
-                      </a>
-                    </li>
-                    <li class="">
-                      <a href="#" title="phone link">
-                        <span class="fa fa-phone-square fs35 text-system"></span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" title="email link">
-                        <span class="fa fa-envelope-square fs35 text-muted"></span>
-                      </a>
-                    </li>
-                    <li class="hidden">
-                      <a href="#" title="external link">
-                        <span class="fa fa-external-link-square fs35 text-muted"></span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+              </li>
+              <li>
+                <a href="#" title="twitter link">
+                  <span class="fa fa-twitter-square fs35 text-info"></span>
+                </a>
+              </li>
+              <li>
+                <a href="#" title="google plus link">
+                  <span class="fa fa-google-plus-square fs35 text-danger"></span>
+                </a>
+              </li>
+              <li class="hidden">
+                <a href="#" title="behance link">
+                  <span class="fa fa-behance-square fs35 text-primary"></span>
+                </a>
+              </li>
+              <li class="hidden">
+                <a href="#" title="pinterest link">
+                  <span class="fa fa-pinterest-square fs35 text-danger-light"></span>
+                </a>
+              </li>
+              <li class="hidden">
+                <a href="#" title="linkedin link">
+                  <span class="fa fa-linkedin-square fs35 text-info"></span>
+                </a>
+              </li>
+              <li class="hidden">
+                <a href="#" title="github link">
+                  <span class="fa fa-github-square fs35 text-dark"></span>
+                </a>
+              </li>
+              <li class="">
+                <a href="#" title="phone link">
+                  <span class="fa fa-phone-square fs35 text-system"></span>
+                </a>
+              </li>
+              <li>
+                <a href="#" title="email link">
+                  <span class="fa fa-envelope-square fs35 text-muted"></span>
+                </a>
+              </li>
+              <li class="hidden">
+                <a href="#" title="external link">
+                  <span class="fa fa-external-link-square fs35 text-muted"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="admin-form theme-primary">
+    <form>
+        <div class="panel heading-border panel-primary">
+          <div class="panel-body bg-light">
+        <div class="section-divider mb40" id="spy1">
+          <span>Dados principais</span>
+        </div>      
+          <div class="row">
+            <div class="col-md-2">
+                <label><strong>  Quem é você:</strong></label>
+                <br>
+                <select class="form-control">
+                    <option></option>
+                    <option value="1">Homem</option>
+                    <option value="2">Mulher</option>
+                    <option value="3">Casal - Ele e Ele</option>
+                    <option value="4">Casal - Ele e Ela</option>
+                    <option value="5">Casal - Ela e Ela</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label><strong>Estado Civil:</strong></label>
+                <br>
+                <select class="form-control">
+                    <option></option>
+                    <option value="1">Casado</option>
+                    <option value="2">Namorando</option>
+                    <option value="3">Noivo</option>
+                    <option value="4">Solteiro</option>
+                    <option value="5">Viuva</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label><strong>CEP:</strong></label>
+                  <input type="text" class="form-control" placeholder="Ex: 99999-999">
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-6">
+              <label><strong>  Meu resumo</strong></label>
+              <div class="section">
+                <label class="field prepend-icon">
+                  <textarea class="gui-textarea" id="comment" name="comment"></textarea>
+                  <label for="comment" class="field-icon">
+                    <i class="fa fa-comments"></i>
+                  </label>
+                  <span class="input-footer">
+                    <strong>Exemplo: </strong> Pessoa muito séria e que gosta de novas aventuras</span>
+                </label>
               </div>
             </div>
-        </div>
-      </section>
-      <!-- End: Content -->
+          </div>
+          <div class="row">
+            <div class="panel sort-disable mb50 panel-collapsed" id="p2" data-panel-color="false" data-panel-fullscreen="false" data-panel-remove="false" data-panel-title="false">
+              <div class="panel-heading">
+                <span class="panel-icon">
+                    <i class="fa fa-minus"></i>
+                </span>
+                <span class="panel-title"> You can minimize me!</span>
+                <span class="panel-controls">
+                  <a href="#" class="panel-control-loader"></a>
+                  <a href="#" class="panel-control-collapse"></a>
+                </span>
+              </div>
+              <div class="panel-body" style="display: none;">
+                  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+                  </p>
+                  <hr class="short alt">
+                  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+                  </p>
+              </div>
+              </div>
+          </div>
+          <div class="section-divider mb40" id="spy1">
+            <span>Meus interesses</span>
+          </div>
+          <div class="row">
+             <div class="col-md-12">
+                <label><strong>Que genero me interessa</strong></label>
+                <br>
+                <br>
+                <div class="option-group field">
+                  <label class="option option-primary">
+                    <input type="checkbox" name="checked" value="1">
+                    <span class="checkbox"></span>Homem
+                  </label>
+                  <label class="option option-primary">
+                    <input type="checkbox" name="checked" value="2">
+                    <span class="checkbox"></span>Mulher
+                  </label>
+                  <label class="option option-primary">
+                    <input type="checkbox" name="checked" value="3">
+                    <span class="checkbox"></span>Casal (Homem e Homem)
+                  </label>                  
+                  <label class="option option-primary">
+                    <input type="checkbox" name="checked" value="4">
+                    <span class="checkbox"></span>Casal (Homem e Mulher)
+                  </label>
+                  <label class="option option-primary">
+                    <input type="checkbox" name="checked" value="5">
+                    <span class="checkbox"></span>Casal (Mulher e Mulher)
+                  </label>
+                  <label class="option option-primary">
+                    <input type="checkbox" name="checked" value="6">
+                    <span class="checkbox"></span>Trans
+                  </label>
+                  <label class="option option-primary">
+                    <input type="checkbox" name="checked" value="7">
+                    <span class="checkbox"></span>CD(Crossdresser)
+                  </label>                                                                                          
+                </div>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-12"> 
+              <br>
+              <label><strong>Que tipo de relacionamento me interessa</strong></label>
+            </div>
+              
+          </div>
+          <br>
+          <div class="row">
+            <div class="option-group field">
+              <div class="row">  
+                <div class="col-md-12">
+                    <div class="col-md-3">
+                      <label class="option option-primary">
+                      <input type="checkbox" name="checked" value="1">
+                      <span class="checkbox"></span>Exibicionismo
+                    </label>
+                    </div>
+                    <div class="col-md-3">
+                      <label class="option option-primary">
+                      <input type="checkbox" name="checked" value="2">
+                      <span class="checkbox"></span>Romantico
+                    </label>
+                    </div>
+                    <div class="col-md-3">
+                      <label class="option option-primary">
+                      <input type="checkbox" name="checked" value="3">
+                      <span class="checkbox"></span>Sexo rápido
+                    </label>                  
+                    </div>
+                    <div class="col-md-3">
+                      <label class="option option-primary">
+                        <input type="checkbox" name="checked" value="4">
+                        <span class="checkbox"></span>Discreto
+                      </label>
+                    </div>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-3">
+                      <label class="option option-primary">
+                        <input type="checkbox" name="checked" value="5">
+                        <span class="checkbox"></span>Apenas amizade
+                      </label>
+                    </div>
+                    <div class="col-md-3">
+                      <label class="option option-primary">
+                        <input type="checkbox" name="checked" value="6">
+                        <span class="checkbox"></span>Sexo casual
+                      </label>
+                    </div>
+                    <div class="col-md-3">
+                      <label class="option option-primary">
+                        <input type="checkbox" name="checked" value="7">
+                      <span class="checkbox"></span>Sexo a dois
+                      </label>
+                    </div>
+                    <div class="col-md-3">
+                      <label class="option option-primary">
+                        <input type="checkbox" name="checked" value="8">
+                        <span class="checkbox"></span>Entre casais
+                      </label>
+                    </div>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                  <div class="col-md-12">
+                    
+                    <div class="col-md-3">
+                      <label class="option option-primary">
+                        <input type="checkbox" name="checked" value="9">
+                        <span class="checkbox"></span>Em grupo(3 ou mais)
+                      </label>
+                    </div>
+                    <div class="col-md-3">
+                      <label class="option option-primary">
+                        <input type="checkbox" name="checked" value="10">
+                        <span class="checkbox"></span>Outros
+                      </label>   
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-2">
+                <label><strong>  Estado Civil de interesse:</strong></label>
+                <br>
+                <select class="form-control">
+                    <option></option>
+                    <option value="1">Casado</option>
+                    <option value="2">Namorando</option>
+                    <option value="3">Noivo</option>
+                    <option value="4">Solteiro</option>
+                    <option value="5">Viuva</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label><strong>Que esteja no estado(UF):</strong></label>
+                <br>
+                <select class="form-control">
+                    <option></option>
+                    <option value="12">Acre</option>
+                    <option value="27">Alagoas</option>
+                    <option value="16">Amapá</option>
+                    <option value="13">Amazonas</option>
+                    <option value="29">Bahia</option>
+                    <option value="23">Ceará</option>
+                    <option value="53">Distrito Federal</option>
+                    <option value="32">Espírito Santo</option>
+                    <option value="52">Goiás</option>
+                    <option value="21">Maranhão</option>
+                    <option value="51">Mato Grosso</option>
+                    <option value="50">Mato Grosso do Sul</option>
+                    <option value="31">Minas Gerais</option>
+                    <option value="15">Pará</option>
+                    <option value="25">Paraíba</option>
+                    <option value="41">Paraná</option>
+                    <option value="26">Pernambuco</option>
+                    <option value="22">Piauí</option>
+                    <option value="33">Rio de Janeiro</option>
+                    <option value="24">Rio Grande do Norte</option>
+                    <option value="43">Rio Grande do Sul</option>
+                    <option value="11">Rondônia</option>
+                    <option value="14">Roraima</option>
+                    <option value="42">Santa Catarina</option>
+                    <option value="35">São Paulo</option>
+                    <option value="28">Sergipe</option>
+                    <option value="17">Tocantins</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label><strong>Que esteja na cidade:</strong></label>
+                <br>
+                <select class="form-control">
+                    <option></option>
+                    <option value="12">Acre</option>
+                    <option value="27">Alagoas</option>
+                    <option value="16">Amapá</option>
+                    <option value="13">Amazonas</option>
+                    <option value="29">Bahia</option>
+                    <option value="23">Ceará</option>
+                    <option value="53">Distrito Federal</option>
+                    <option value="32">Espírito Santo</option>
+                    <option value="52">Goiás</option>
+                    <option value="21">Maranhão</option>
+                    <option value="51">Mato Grosso</option>
+                    <option value="50">Mato Grosso do Sul</option>
+                    <option value="31">Minas Gerais</option>
+                    <option value="15">Pará</option>
+                    <option value="25">Paraíba</option>
+                    <option value="41">Paraná</option>
+                    <option value="26">Pernambuco</option>
+                    <option value="22">Piauí</option>
+                    <option value="33">Rio de Janeiro</option>
+                    <option value="24">Rio Grande do Norte</option>
+                    <option value="43">Rio Grande do Sul</option>
+                    <option value="11">Rondônia</option>
+                    <option value="14">Roraima</option>
+                    <option value="42">Santa Catarina</option>
+                    <option value="35">São Paulo</option>
+                    <option value="28">Sergipe</option>
+                    <option value="17">Tocantins</option>
+                </select>
+            </div>
+          </div> 
+          </div>
+          </div> 
+    </form>
+  </div>
+</section>
+<!-- End: Content -->
+
+
+<script src="vendor/jquery/jquery-1.11.1.min.js"></script>
+
+
+
+<!-- Bootstrap Tabdrop Plugin -->
+<script src="vendor/plugins/tabdrop/bootstrap-tabdrop.js"></script>
+
+<!-- FullCalendar Plugin + moment Dependency -->
+<script src="vendor/plugins/fullcalendar/lib/moment.min.js"></script>
+<script src="vendor/plugins/fullcalendar/fullcalendar.min.js"></script>
+
+<!-- HighCharts Plugin -->
+<script src="vendor/plugins/highcharts/highcharts.js"></script>
+
+  <!-- jQuery -->
+  
+
+  <!-- Page Plugins -->
+  <script src="vendor/plugins/waypoints/jquery.waypoints.min.js"></script>
+
+
+<!-- Theme Javascript -->
+<script src="assets/js/utility/utility.js"></script>
+<script src="assets/js/demo/demo.js"></script>
+<script src="assets/js/main.js"></script>
+
+<!-- Widget Javascript -->
+<script src="assets/js/demo/widgets.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+
+      "use strict";
+
+      // Init Demo JS  
+      Demo.init();
+
+
+      // Init Theme Core    
+      Core.init();
+
+
+      // Init Widget Demo JS
+      // demoHighCharts.init();
+
+      // Because we are using Admin Panels we use the OnFinish 
+      // callback to activate the demoWidgets. It's smoother if
+      // we let the panels be moved and organized before 
+      // filling them with content from various plugins
+
+      // Init plugins used on this page
+      // HighCharts, JvectorMap, Admin Panels
+
+
+      // Init Admin Panels on widgets inside the ".admin-panels" container
+      $('.admin-panels').adminpanel({
+        grid: '.admin-grid',
+        draggable: true,
+        preserveGrid: true,
+        // mobile: true,
+        onStart: function () {
+          // Do something before AdminPanels runs
+        },
+        onFinish: function () {
+          $('.admin-panels').addClass('animated fadeIn').removeClass('fade-onload');
+
+          // Init the rest of the plugins now that the panels
+          // have had a chance to be moved and organized.
+          // It's less taxing to organize empty panels
+          demoHighCharts.init();
+          // runVectorMaps(); // function below
+        },
+        onSave: function () {
+          $(window).trigger('resize');
+        }
+      });
+
+
+      // Init plugins for ".calendar-widget"
+      // plugins: FullCalendar
+      //
+      $('#calendar-widget').fullCalendar({
+        // contentHeight: 397,
+        editable: true,
+        events: [{
+          title: 'Sony Meeting',
+          start: '2015-05-1',
+          end: '2015-05-3',
+          className: 'fc-event-success',
+        }, {
+          title: 'Conference',
+          start: '2015-05-11',
+          end: '2015-05-13',
+          className: 'fc-event-warning'
+        }, {
+          title: 'Lunch Testing',
+          start: '2015-05-21',
+          end: '2015-05-23',
+          className: 'fc-event-primary'
+        },
+        ],
+        eventRender: function (event, element) {
+          // create event tooltip using bootstrap tooltips
+          $(element).attr("data-original-title", event.title);
+          $(element).tooltip({
+            container: 'body',
+            delay: {
+              "show": 100,
+              "hide": 200
+            }
+          });
+          // create a tooltip auto close timer  
+          $(element).on('show.bs.tooltip', function () {
+            var autoClose = setTimeout(function () {
+              $('.tooltip').fadeOut();
+            }, 3500);
+          });
+        }
+      });
+
+
+      // Init plugins for ".task-widget"
+      // plugins: Custom Functions + jQuery Sortable
+      //
+      var taskWidget = $('div.task-widget');
+      var taskItems = taskWidget.find('li.task-item');
+      var currentItems = taskWidget.find('ul.task-current');
+      var completedItems = taskWidget.find('ul.task-completed');
+
+      // Init jQuery Sortable on Task Widget
+      taskWidget.sortable({
+        items: taskItems, // only init sortable on list items (not labels)
+        handle: '.task-menu',
+        axis: 'y',
+        connectWith: ".task-list",
+        update: function (event, ui) {
+          var Item = ui.item;
+          var ParentList = Item.parent();
+
+          // If item is already checked move it to "current items list"
+          if (ParentList.hasClass('task-current')) {
+            Item.removeClass('item-checked').find('input[type="checkbox"]').prop('checked', false);
+          }
+          if (ParentList.hasClass('task-completed')) {
+            Item.addClass('item-checked').find('input[type="checkbox"]').prop('checked', true);
+          }
+
+        }
+      });
+
+      // Custom Functions to handle/assign list filter behavior
+      taskItems.on('click', function (e) {
+        e.preventDefault();
+        var This = $(this);
+        var Target = $(e.target);
+
+        if (Target.is('.task-menu') && Target.parents('.task-completed').length) {
+          This.remove();
+          return;
+        }
+
+        if (Target.parents('.task-handle').length) {
+          // If item is already checked move it to "current items list"
+          if (This.hasClass('item-checked')) {
+            This.removeClass('item-checked').find('input[type="checkbox"]').prop('checked', false);
+          }
+          // Otherwise move it to the "completed items list"
+          else {
+            This.addClass('item-checked').find('input[type="checkbox"]').prop('checked', true);
+          }
+        }
+
+      });
+
+
+      var highColors = [bgSystem, bgSuccess, bgWarning, bgPrimary];
+
+      // Chart data
+      var seriesData = [{
+        name: 'Phones',
+        data: [5.0, 9, 17, 22, 19, 11.5, 5.2, 9.5, 11.3, 15.3, 19.9, 24.6]
+      }, {
+        name: 'Notebooks',
+        data: [2.9, 3.2, 4.7, 5.5, 8.9, 12.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+      }, {
+        name: 'Desktops',
+        data: [15, 19, 22.7, 29.3, 22.0, 17.0, 23.8, 19.1, 22.1, 14.1, 11.6, 7.5]
+      }, {
+        name: 'Music Players',
+        data: [11, 6, 5, 15, 17.0, 22.0, 30.8, 24.1, 14.1, 11.1, 9.6, 6.5]
+      }];
+    });
+  </script>

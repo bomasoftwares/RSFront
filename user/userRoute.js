@@ -12,7 +12,7 @@
                         name: 'userHome'
                 })
                 .when('/user/edit', {
-                        templateUrl: 'user/templates/userEditTemplate.html',
+                        templateUrl: 'user/templates/userNewsFeed.html',
                         controller: 'userEditCtrl',
                         name: 'userEdit'
                 })
