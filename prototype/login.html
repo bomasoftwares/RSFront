@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="bmSexMoveLoginApp">
+<html>
 <head>
   <!-- Meta, title, CSS, favicons, etc. -->
   <meta charset="utf-8">
@@ -75,18 +75,9 @@
   <!-- Angular-Loading Bar Js -->
   <script src="../../bower_components/angular-loading-bar/build/loading-bar.min.js"></script>
 
-
-  <!-- Boma Js -->
-
-  <script src="login/loginApp.js"></script>
-  <script src="common/factories/message/messageFactory.js"></script>
-  <script src="login/services/loginService.js"></script>
-  <script src="common/factories/token/tokenFactory.js"></script>
-  <script src="login/controllers/loginCtrl.js"></script>
-
 </head>
 
-<body class="skin-system" ng-app="bmSexMoveLoginApp" ng-controller="loginCtrl">
+<body class="skin-system">
 
 
   <div class="external-page sb-l-c sb-r-c">
@@ -108,14 +99,13 @@
 </a>
 </div>
 </div>
-<pre>{{Model | json}} </pre>
 <form method="POST" name="loginForm">
   <div class="col-sm-2">
   </div>
   <div class="col-sm-9">
     <div class="row">
       <label for="username" class="field prepend-icon">
-        <input type="text" class="gui-input" ng-model="Model.UserName" ng-required="true" style="background:#DCDCDC;" placeholder="Usuário" title="Entre com o usuário que já foi cadastrado">
+        <input type="text" class="gui-input" style="background:#DCDCDC;" placeholder="Usuário" title="Entre com o usuário que já foi cadastrado">
 <label for="username" class="field-icon">
           <i class="fa fa-user"></i>
         </label>
@@ -123,7 +113,7 @@
 </div>
 <div class="row">
   <label for="password" class="field prepend-icon">
-        <input type="password" ng-model="Model.Password" ng-required="true" class="gui-input" style="background:#DCDCDC;" placeholder="Senha">
+        <input type="password" class="gui-input" style="background:#DCDCDC;" placeholder="Senha">
 <label for="password" class="field-icon">
           <i class="fa fa-lock"></i>
         </label>
@@ -132,15 +122,15 @@
 </form>
 <div class="row">
   <div class="col-sm-6 without-border" style="margin-top:6.5%; margin-bottom:4%;">
-<a ng-href="account/templates/forgotPassword.html" style="color:white;">Esqueci a senha</a>
+<a href="prototype/forgotPassword.html" style="color:white;">Esqueci a senha</a>
 </div>
 
 <div class="col-sm-6 without-border">
-  <button class="btn-block btn btn-danger" ng-click="login(loginForm)" ng-disabled="isLoading">Entrar</button>
+  <a href="prototype/index.html" <button class="btn-block btn btn-danger">Entrar</button> </a>
 </div>
 </div>
 <div class="row teste">
-  <a href="account/templates/newAccount.html" class="btn-block btn btn-dark" ng-disabled="isLoading">Registre-se <b> GRÁTIS </b> por 10 dias ! </a>
+  <a href="prototype/newAccount.html" class="btn-block btn btn-dark">Registre-se <b> GRÁTIS </b> por 10 dias ! </a>
 </div>
 </div>
 
