@@ -40,7 +40,7 @@
                     _getToken(nickName, password);
                 },
                 post: function(Model){
-                    return Restangular.all("account").post(Model);
+                    return Restangular.all("users").post(Model);
                 }
             };
 
