@@ -17,6 +17,9 @@
   <!-- FullCalendar Plugin CSS -->
   <link rel="stylesheet" type="text/css" href="vendor/plugins/fullcalendar/fullcalendar.min.css">
 
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" type="text/css" href="vendor/plugins/magnific/magnific-popup.css">
+
   <!-- Theme CSS -->
   <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
 
@@ -34,7 +37,7 @@
 <![endif]-->
 </head>
 
-<body class="dashboard-page">
+<body class="gallery-page">
 
   <!-- Start: Main -->
   <div id="main">
@@ -625,7 +628,7 @@
               </a>
               <div class="media-body" >
                 <div class="media-links">
-                   <a href="prototype/userEditTemplate.html">Editar Perfil</a> - <a href="prototype/login.html">Sair</a>
+                   <a ng-href="/user/edit">Editar Perfil</a> - <a href="prototype/login.html">Sair</a>
                 </div>
                 <div class="media-author">Batman</div>
               </div>
@@ -648,13 +651,13 @@
           </li>
           <li class="sidebar-label pt20">Meus dados</li>
           <li>
-            <a href="prototype/galleryTemplate.html">
+            <a href="#">
               <span class="fa fa-camera-retro"></span>
               <span class="sidebar-title">Fotos</span>
             </a>
           </li>
           <li>
-            <a href="prototype/videosTemplate.html">
+            <a href="#">
               <span class="fa fa-video-camera"></span>
               <span class="sidebar-title">Vídeos</span>
             </a>
@@ -724,191 +727,434 @@
     <!-- Start: Content-Wrapper -->
     <section id="content_wrapper" style="margin-top: 0px !important">
       <!-- Begin: Content -->
-      <section id="content" class="table-layout animated fadeIn">
+      <!--<section id="content" class="table-layout">-->
     <!-- begin: .tray-center -->
     <link rel="stylesheet" type="text/css" href="user/styles/user.css" />
     <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis' rel='stylesheet' type='text/css' />
-    <div class="tray tray-center">
-          
-        <h2>Página inicial</h2>
-    
-            <div class="container">
-            <div class="header">
-                <div class="clr"></div>
+    <!--<div class="tray tray-center">-->
+
+
+            
+
+<section id="content" class="table-layout animated fadeIn">
+
+                  <!-- AQUI A SECTION PARA INCLUIR A GALERIA -->
+
+                           
+
+      <!--<section id="content" class="table-layout animated fadeIn">-->
+
+        <div class="tray tray-center">
+
+          <div class="mh15 pv15 br-b br-light">
+            <div class="row">
+              <div class="col-xs-7">
+                <div class="mix-controls ib">
+                  <form class="controls" id="select-filters">
+                    <!-- We can add an unlimited number of "filter groups" using the following format: -->
+                    <div class="btn-group ib mr10">
+                      <button type="button" class="btn btn-default hidden-xs">
+                        <span class="fa fa-folder"></span>
+                      </button>
+                      <div class="btn-group">
+                        <fieldset>
+                          <select id="filter1">
+                            <option value="">Todas as pastas</option>
+                            <option value=".folder1">Publicidade</option>
+                            <option value=".folder2">Férias na Espanha</option>
+                            <option value=".folder3">Festas</option>
+                          </select>
+                        </fieldset>
+                      </div>
+                    </div>
+                    <div class="btn-group ib mr10">
+                      <button type="button" class="btn btn-default hidden-xs">
+                        <span class="fa fa-tag"></span>
+                      </button>
+                      <div class="btn-group">
+                        <fieldset>
+                          <select id="filter2">
+                            <option value="">Todas as marcas</option>
+                            <option value=".label1">Trabalho</option>
+                            <option value=".label3">Amigos</option>
+                            <option value=".label2">Viagem</option>
+                          </select>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+              </div>
+              <div class="col-xs-5 text-right">
+                <button type="button" id="mix-reset" class="btn btn-default mr5">Limpar Filtros</button>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default to-grid">
+                    <span class="fa fa-th"></span>
+                  </button>
+                  <button type="button" class="btn btn-default to-list">
+                    <span class="fa fa-navicon"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="mix-controls hidden">
+              <form class="controls admin-form" id="checkbox-filters">
+                <!-- We can add an unlimited number of "filter groups" using the following format: -->
+
+                <fieldset class="">
+                  <h4>Cars</h4>
+
+                  <label class="option block mt10">
+                    <input type="checkbox" value=".circle">
+                    <span class="checkbox"></span>Circle
+                  </label>
+
+                </fieldset>
+
+                <button id="mix-reset2">Clear All</button>
+              </form>
+
+            </div>
+          </div>
+
+          <div id="mix-container">
+
+            <div class="fail-message">
+              <span>Não foram encontrados itens que correspondem aos filtros selecionados.</span>
+            </div>
+
+            <div class="mix label1 folder1">
+              <div class="panel p6 pbn">
+                <div class="of-h">                 
+                    <img src="img/gallery/work1.jpg" class="img-responsive" title="Em Sampa">
+                  <div class="row table-layout">
+                    <div class="col-xs-8 va-m pln">
+                      <h6>Em Sampa</h6>
+                    </div>
+                    <div class="col-xs-4 text-right va-m prn">
+                      <span class="fa fa-eye-slash fs12 text-muted"></span>
+                      <span class="fa fa-circle fs10 text-danger ml10"></span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mix label2 folder2">
+              <div class="panel p6 pbn">
+                <div class="of-h">
+                  <img src="img/gallery/travel1.jpg" class="img-responsive" title="Estátua">
+                  <div class="row table-layout">
+                    <div class="col-xs-8 va-m pln">
+                      <h6>Estátua</h6>
+                    </div>
+                    <div class="col-xs-4 text-right va-m prn">
+                      <span class="fa fa-eye-slash fs12 text-muted"></span>
+                      <span class="fa fa-circle fs10 text-system ml10"></span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mix label3 folder3">
+              <div class="panel p6 pbn">
+                <div class="of-h">
+                  <img src="img/gallery/friends1.jpg" class="img-responsive" title="Brinde à vida !">
+                  <div class="row table-layout">
+                    <div class="col-xs-8 va-m pln">
+                      <h6>Brinde à vida !</h6>
+                    </div>
+                    <div class="col-xs-4 text-right va-m prn">
+                      <span class="fa fa-eye-slash fs12 text-muted"></span>
+                      <span class="fa fa-circle fs10 text-alert ml10"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mix label1 folder1">
+              <div class="panel p6 pbn">
+                <div class="of-h">
+                  <img src="img/gallery/work2.jpg" class="img-responsive" title="Batom Matte Nude">
+                  <div class="row table-layout">
+                    <div class="col-xs-8 va-m pln">
+                      <h6>Batom Matte Nude</h6>
+                    </div>
+                    <div class="col-xs-4 text-right va-m prn">
+                      <span class="fa fa-eye-slash fs12 text-muted"></span>
+                      <span class="fa fa-circle fs10 text-danger ml10"></span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mix label2 folder2">
+              <div class="panel p6 pbn">
+                <div class="of-h">
+                  <img src="img/gallery/travel2.jpg" class="img-responsive" title="Linda vista !">
+                  <div class="row table-layout">
+                    <div class="col-xs-8 va-m pln">
+                      <h6>Linda vista !</h6>
+                    </div>
+                    <div class="col-xs-4 text-right va-m prn">
+                      <span class="fa fa-eye-slash fs12 text-muted"></span>
+                      <span class="fa fa-circle fs10 text-system ml10"></span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mix label3 folder3">
+              <div class="panel p6 pbn">
+                <div class="of-h">
+                  <img src="img/gallery/friends2.jpg" class="img-responsive" title="Baladinha">
+                  <div class="row table-layout">
+                    <div class="col-xs-8 va-m pln">
+                      <h6>Baladinha</h6>
+                    </div>
+                    <div class="col-xs-4 text-right va-m prn">
+                      <span class="fa fa-eye-slash fs12 text-muted"></span>
+                      <span class="fa fa-circle fs10 text-alert ml10"></span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mix label1 folder1">
+              <div class="panel p6 pbn">
+                <div class="of-h">
+                  <img src="img/gallery/work3.jpg" class="img-responsive" title="Moranguinho :p">
+                  <div class="row table-layout">
+                    <div class="col-xs-8 va-m pln">
+                      <h6>Moranguinho :P</h6>
+                    </div>
+                    <div class="col-xs-4 text-right va-m prn">
+                      <span class="fa fa-eye-slash fs12 text-muted"></span>
+                      <span class="fa fa-circle fs10 text-danger ml10"></span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mix label2 folder2">
+              <div class="panel p6 pbn">
+                <div class="of-h">
+                  <img src="img/gallery/travel3.jpg" class="img-responsive" title="Sapateado">
+                  <div class="row table-layout">
+                    <div class="col-xs-8 va-m pln">
+                      <h6>Sapateado</h6>
+                    </div>
+                    <div class="col-xs-4 text-right va-m prn">
+                      <span class="fa fa-eye-slash fs12 text-muted"></span>
+                      <span class="fa fa-circle fs10 text-system ml10"></span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mix label1 folder1">
+              <div class="panel p6 pbn">
+                <div class="of-h">
+                  <img src="img/gallery/work5.jpg" class="img-responsive" title="Pole Dance">
+                  <div class="row table-layout">
+                    <div class="col-xs-8 va-m pln">
+                      <h6>Pole Dance</h6>
+                    </div>
+                    <div class="col-xs-4 text-right va-m prn">
+                      <span class="fa fa-eye-slash fs12 text-muted"></span>
+                      <span class="fa fa-circle fs10 text-danger ml10"></span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mix label2 folder2">
+              <div class="panel p6 pbn">
+                <div class="of-h">
+                  <img src="img/gallery/travel4.jpg" class="img-responsive" title="Dança Espanhola">
+                  <div class="row table-layout">
+                    <div class="col-xs-8 va-m pln">
+                      <h6>Dança Espanhola</h6>
+                    </div>
+                    <div class="col-xs-4 text-right va-m prn">
+                      <span class="fa fa-eye-slash fs12 text-muted"></span>
+                      <span class="fa fa-circle fs10 text-system ml10"></span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mix label3 folder3">
+              <div class="panel p6 pbn">
+                <div class="of-h">
+                  <img src="img/gallery/friends3.jpg" class="img-responsive" title="Clima Perfeito !">
+                  <div class="row table-layout">
+                    <div class="col-xs-8 va-m pln">
+                      <h6>Clima Perfeito !</h6>
+                    </div>
+                    <div class="col-xs-4 text-right va-m prn">
+                      <span class="fa fa-eye-slash fs12 text-muted"></span>
+                      <span class="fa fa-circle fs10 text-alert ml10"></span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mix label1 folder1">
+              <div class="panel p6 pbn">
+                <div class="of-h">
+                  <img src="img/gallery/work4.jpg" class="img-responsive" title="Bom vinho francês !">
+                  <div class="row table-layout">
+                    <div class="col-xs-8 va-m pln">
+                      <h6>Delicioso vinho !</h6>
+                    </div>
+                    <div class="col-xs-4 text-right va-m prn">
+                      <span class="fa fa-eye-slash fs12 text-muted"></span>
+                      <span class="fa fa-circle fs10 text-danger ml10"></span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="gap"></div>
+            <div class="gap"></div>
+            <div class="gap"></div>
+            <div class="gap"></div>
+
+          </div>
+
+        </div>
+
+        <aside class="tray tray-right tray320" data-tray-height="match">
+
+          <h4 class="tray-title"> Carregar Nova Imagem </h4>
+
+          <!-- Image Upload Field -->
+          <div class="fileupload fileupload-new admin-form mt20" data-provides="fileupload">
+            <div class="section mb10">
+              <label for="name2" class="field prepend-icon">
+                <input type="text" name="name2" id="name2" class="event-name gui-input br-light light" placeholder="Pasta">
+                <label for="name2" class="field-icon">
+                  <i class="fa fa-folder-o"></i>
+                </label>
+              </label>
+            </div>
+
+          <div class="fileupload fileupload-new admin-form mt20" data-provides="fileupload">
+            <div class="section mb10">
+              <label for="name2" class="field prepend-icon">
+                <input type="text" name="name2" id="name2" class="event-name gui-input br-light light" placeholder="Título">
+                <label for="name2" class="field-icon">
+                  <i class="fa fa-pencil"></i>
+                </label>
+              </label>
+            </div>
+            <div class="section mb10">
+              <label class="field prepend-icon">
+                <textarea class="gui-textarea br-light h-80 bg-light" id="comment" name="comment" placeholder="Descrição"></textarea>
+                <label for="comment" class="field-icon">
+                  <i class="fa fa-comments"></i>
+                </label>
+                <span class="input-footer hidden">
+                  <strong>Hint:</strong>Don't be negative or off topic! just be awesome...</span>
+              </label>
+            </div>
+            <div class="row">
+              <div class="col-xs-4">
+                <span class="button btn-system btn-file btn-block ph5">
+                  <span class="fileupload-new">Selecionar</span>
+                  <span class="fileupload-exists">Editar</span>
+                  <input type="file">
+                </span>
+                
+              </div>
+              <div class="col-xs-8 pln">
+                <label for="name2" class="field prepend-icon">
+                  <input type="text" name="name2" id="name2" class="event-name gui-input br-light bg-light" placeholder="Marcas">
+                  <label for="name2" class="field-icon">
+                    <i class="fa fa-pencil"></i>
+                  </label>
+                </label>
+              </div>
+            </div>
+
+            <div class="fileupload-preview thumbnail m5 mt20 mb30">
+              <img data-src="holder.js/100%x140" alt="holder">
             </div>
             
-            <div class="content">
-                <ul class="ca-menu ca-list">
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/casal-hetero100.png" class="ca-icon" >
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Héteros</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/casal-gay100.png" class="ca-icon" >
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Gays</h2>
-                            </div>
-                            <!--#3b3f4f-->
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/casal-lesbica100.png" class="ca-icon" >
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Lésbicas</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/solteiros.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Solteiros</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/solteiras.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Solteiras</h2>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+              <span class="button btn-system btn-file btn-block ph5" style="width:40%; margin-left:59%; margin-top:-4%;">
+                    <span>Enviar</span>
+              </span>
             
-            <div class="content">
-                <ul class="ca-menu ca-list">
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/casal-casal-trans100.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Casais</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/casal-casal-hetero100.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Casal</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/casal-casal-gay100.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Casal</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/casal-casal-lesbica100.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Casal</h2>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="content">
-                <ul class="ca-menu ca-list">
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/trans_color.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Travesti</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/fotos.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Fotos</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/eventos2.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Eventos</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/casas.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Casas</h2>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="content">
-                <ul class="ca-menu ca-list">
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/restaurantes.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title" style="font-size:20px !important">Restaurantes</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/pousada_hotel.png" class="ca-icon" style="margin-top: 0% !important">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title" style="margin-top:-6% !important;">Hóteis & <br> Pousadas</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/profissionais.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Profissionais</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/videos.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Vídeos</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/sexshop.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Sex Shop</h2>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <ul>
-                    <a href="/prototype/userNewsFeedTemplate.html">TIMELINE</a>
-                </ul>
-            </div>
-            
+          </div>
+
+          <!-- Labels Menu -->
+          <div class="list-group list-group-links" style="margin-top:2%;">
+            <div class="list-group-header"> Marcas </div>
+            <a href="#" class="list-group-item">
+              Trabalho
+              <span class="badge badge-danger">5</span>
+            </a>
+            <a href="#" class="list-group-item">
+              Amigos
+              <span class="badge badge-alert">3</span>
+            </a>
+            <a href="#" class="list-group-item">
+              Viagem
+              <span class="badge badge-system">4</span>
+            </a>
+          </div>
+
+        </aside>
+
+      <!--</section>-->
+
+    </section>
+      
+      
+      
+      
+      
+      
+             
+
+
+
+
+
+
+
+
+
+             <!--</section>-->
+
             
             
             <!-- content -->
-        </div>
+        <!--</div>-->
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
     
     </div>
@@ -981,6 +1227,14 @@
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
 
+<!-- Mixitup Plugin -->
+  <script src="vendor/plugins/mixitup/jquery.mixitup.min.js"></script>
+
+<!-- Page Plugins -->
+  <script src="vendor/plugins/magnific/jquery.magnific-popup.js"></script>
+  <script src="vendor/plugins/fileupload/fileupload.js"></script>
+  <script src="vendor/plugins/holder/holder.min.js"></script>
+
 <!-- Bootstrap Tabdrop Plugin -->
 <script src="vendor/plugins/tabdrop/bootstrap-tabdrop.js"></script>
 
@@ -1049,6 +1303,310 @@
       // Init plugins for ".calendar-widget"
       // plugins: FullCalendar
       //
+    // To keep our code clean and modular, all custom functionality will be
+    // contained inside a single object literal called "dropdownFilter".
+    var dropdownFilter = {
+
+      // Declare any variables we will need as properties of the object
+      $filters: null,
+      $reset: null,
+      groups: [],
+      outputArray: [],
+      outputString: '',
+
+      // The "init" method will run on document ready and cache any jQuery objects we will need.
+      init: function() {
+        var self = this; // As a best practice, in each method we will asign "this" to the variable "self" so that it remains scope-agnostic. We will use it to refer to the parent "dropdownFilter" object so that we can share methods and properties between all parts of the object.
+
+        self.$filters = $('#select-filters');
+        self.$reset = $('#mix-reset');
+        self.$container = $('#mix-container');
+
+        self.$filters.find('fieldset').each(function() {
+          self.groups.push({
+            $dropdown: $(this).find('select'),
+            active: ''
+          });
+        });
+
+        self.bindHandlers();
+      },
+
+      // The "bindHandlers" method will listen for whenever a select is changed. 
+      bindHandlers: function() {
+        var self = this;
+
+        // Handle select change    
+        self.$filters.on('change', 'select', function(e) {
+          e.preventDefault();
+
+          self.parseFilters();
+        });
+
+        // Handle reset click
+        self.$reset.on('click', function(e) {
+          e.preventDefault();
+
+          self.$filters.find('select').val('');
+
+          self.parseFilters();
+        });
+      },
+
+      // The parseFilters method pulls the value of each active select option
+      parseFilters: function() {
+        var self = this;
+
+        // loop through each filter group and grap the value from each one.
+        for (var i = 0, group; group = self.groups[i]; i++) {
+          group.active = group.$dropdown.val();
+        }
+
+        self.concatenate();
+      },
+
+      // The "concatenate" method will crawl through each group, concatenating filters as desired:
+      concatenate: function() {
+        var self = this;
+
+        self.outputString = ''; // Reset output string
+
+        for (var i = 0, group; group = self.groups[i]; i++) {
+          self.outputString += group.active;
+        }
+
+        // If the output string is empty, show all rather than none:
+        !self.outputString.length && (self.outputString = 'all');
+
+        //console.log(self.outputString); 
+        // ^ we can check the console here to take a look at the filter string that is produced
+
+        // Send the output string to MixItUp via the 'filter' method:
+        if (self.$container.mixItUp('isLoaded')) {
+          self.$container.mixItUp('filter', self.outputString);
+        }
+      }
+    };
+
+    // To keep our code clean and modular, all custom functionality will be contained inside a single object literal called "checkboxFilter".
+    var checkboxFilter = {
+
+      // Declare any variables we will need as properties of the object
+      $filters: null,
+      $reset: null,
+      groups: [],
+      outputArray: [],
+      outputString: '',
+
+      // The "init" method will run on document ready and cache any jQuery objects we will need.
+      init: function() {
+        var self = this; // As a best practice, in each method we will asign "this" to the variable "self" so that it remains scope-agnostic. We will use it to refer to the parent "checkboxFilter" object so that we can share methods and properties between all parts of the object.
+
+        self.$filters = $('#checkbox-filters');
+        self.$reset = $('#mix-reset2');
+        self.$container = $('#mix-container');
+
+        self.$filters.find('fieldset').each(function() {
+          self.groups.push({
+            $inputs: $(this).find('input'),
+            active: [],
+            tracker: false
+          });
+        });
+
+        self.bindHandlers();
+      },
+
+      // The "bindHandlers" method will listen for whenever a form value changes. 
+      bindHandlers: function() {
+        var self = this;
+
+        self.$filters.on('change', function() {
+          self.parseFilters();
+        });
+
+        self.$reset.on('click', function(e) {
+          e.preventDefault();
+          self.$filters[0].reset();
+          self.parseFilters();
+        });
+      },
+
+      // The parseFilters method checks which filters are active in each group:
+      parseFilters: function() {
+        var self = this;
+
+        // loop through each filter group and add active filters to arrays
+        for (var i = 0, group; group = self.groups[i]; i++) {
+          group.active = []; // reset arrays
+          group.$inputs.each(function() {
+            $(this).is(':checked') && group.active.push(this.value);
+          });
+          group.active.length && (group.tracker = 0);
+        }
+
+        self.concatenate();
+      },
+
+      // The "concatenate" method will crawl through each group, concatenating filters as desired:
+      concatenate: function() {
+        var self = this,
+          cache = '',
+          crawled = false,
+          checkTrackers = function() {
+            var done = 0;
+
+            for (var i = 0, group; group = self.groups[i]; i++) {
+              (group.tracker === false) && done++;
+            }
+
+            return (done < self.groups.length);
+          },
+          crawl = function() {
+            for (var i = 0, group; group = self.groups[i]; i++) {
+              group.active[group.tracker] && (cache += group.active[group.tracker]);
+
+              if (i === self.groups.length - 1) {
+                self.outputArray.push(cache);
+                cache = '';
+                updateTrackers();
+              }
+            }
+          },
+          updateTrackers = function() {
+            for (var i = self.groups.length - 1; i > -1; i--) {
+              var group = self.groups[i];
+
+              if (group.active[group.tracker + 1]) {
+                group.tracker++;
+                break;
+              } else if (i > 0) {
+                group.tracker && (group.tracker = 0);
+              } else {
+                crawled = true;
+              }
+            }
+          };
+
+        self.outputArray = []; // reset output array
+
+        do {
+          crawl();
+        }
+        while (!crawled && checkTrackers());
+
+        self.outputString = self.outputArray.join();
+
+        // If the output string is empty, show all rather than none:
+        !self.outputString.length && (self.outputString = 'all');
+
+        //console.log(self.outputString); 
+        // ^ we can check the console here to take a look at the filter string that is produced
+
+        // Send the output string to MixItUp via the 'filter' method:
+        if (self.$container.mixItUp('isLoaded')) {
+          self.$container.mixItUp('filter', self.outputString);
+        }
+      }
+    };
+
+    // Init multiselect plugin on filter dropdowns
+    $('#filter1').multiselect({
+      buttonClass: 'btn btn-default',
+    });
+    $('#filter2').multiselect({
+      buttonClass: 'btn btn-default',
+    });
+
+    // Init checkboxFilter code
+    checkboxFilter.init();
+
+    // Init dropdownFilter code
+    dropdownFilter.init();
+
+    var $container = $('#mix-container'), // mixitup container
+      $toList = $('.to-list'), // list view button
+      $toGrid = $('.to-grid'); // list view button
+
+    // Instantiate MixItUp
+    $container.mixItUp({
+      controls: {
+        enable: false // we won't be needing these
+      },
+      animation: {
+        duration: 400,
+        effects: 'fade translateZ(-360px) stagger(45ms)',
+        easing: 'ease'
+      },
+      callbacks: {
+        onMixFail: function() {}
+      }
+    });
+
+    $toList.on('click', function() {
+      if ($container.hasClass('list')) {
+        return
+      }
+      $container.mixItUp('changeLayout', {
+        display: 'block',
+        containerClass: 'list'
+      }, function(state) {
+        // callback function
+      });
+    });
+    $toGrid.on('click', function() {
+      if ($container.hasClass('grid')) {
+        return
+      }
+      $container.mixItUp('changeLayout', {
+        display: 'inline-block',
+        containerClass: 'grid'
+      }, function(state) {
+        // callback function
+      });
+    });
+
+    // Add Gallery Item to Lightbox
+    $('.mix img').magnificPopup({
+      type: 'image',
+      callbacks: {
+        beforeOpen: function(e) {
+          // we add a class to body to indicate overlay is active
+          // We can use this to alter any elements such as form popups
+          // that need a higher z-index to properly display in overlays
+          $('body').addClass('mfp-bg-open');
+
+          // Set Magnific Animation
+          this.st.mainClass = 'mfp-zoomIn';
+
+          // Inform content container there is an animation
+          this.contentContainer.addClass('mfp-with-anim');
+        },
+        afterClose: function(e) {
+
+          setTimeout(function() {
+            $('body').removeClass('mfp-bg-open');
+            $(window).trigger('resize');
+          }, 1000)
+
+        },
+        elementParse: function(item) {
+          // Function will fire for each target element
+          // "item.el" is a target DOM element (if present)
+          // "item.src" is a source that you may modify
+          item.src = item.el.attr('src');
+        },
+      },
+      overflowY: 'scroll',
+      removalDelay: 200, //delay removal by X to allow out-animation
+      prependTo: $('#content_wrapper')
+    });
+
+  
+
+
+
+
       $('#calendar-widget').fullCalendar({
         // contentHeight: 397,
         editable: true,
