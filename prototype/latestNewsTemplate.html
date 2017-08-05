@@ -17,6 +17,9 @@
   <!-- FullCalendar Plugin CSS -->
   <link rel="stylesheet" type="text/css" href="vendor/plugins/fullcalendar/fullcalendar.min.css">
 
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" type="text/css" href="vendor/plugins/magnific/magnific-popup.css">
+
   <!-- Theme CSS -->
   <link rel="stylesheet" type="text/css" href="assets/skin/default_skin/css/theme.css">
 
@@ -34,7 +37,7 @@
 <![endif]-->
 </head>
 
-<body class="dashboard-page">
+<body class="gallery-page">
 
   <!-- Start: Main -->
   <div id="main">
@@ -625,7 +628,7 @@
               </a>
               <div class="media-body" >
                 <div class="media-links">
-                   <a href="prototype/userEditTemplate.html">Editar Perfil</a> - <a href="prototype/login.html">Sair</a>
+                   <a ng-href="/user/edit">Editar Perfil</a> - <a href="prototype/login.html">Sair</a>
                 </div>
                 <div class="media-author">Batman</div>
               </div>
@@ -648,13 +651,13 @@
           </li>
           <li class="sidebar-label pt20">Meus dados</li>
           <li>
-            <a href="prototype/galleryTemplate.html">
+            <a href="#">
               <span class="fa fa-camera-retro"></span>
               <span class="sidebar-title">Fotos</span>
             </a>
           </li>
           <li>
-            <a href="prototype/videosTemplate.html">
+            <a href="#">
               <span class="fa fa-video-camera"></span>
               <span class="sidebar-title">Vídeos</span>
             </a>
@@ -724,191 +727,43 @@
     <!-- Start: Content-Wrapper -->
     <section id="content_wrapper" style="margin-top: 0px !important">
       <!-- Begin: Content -->
-      <section id="content" class="table-layout animated fadeIn">
+      <!--<section id="content" class="table-layout">-->
     <!-- begin: .tray-center -->
     <link rel="stylesheet" type="text/css" href="user/styles/user.css" />
     <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis' rel='stylesheet' type='text/css' />
-    <div class="tray tray-center">
-          
-        <h2>Página inicial</h2>
-    
-            <div class="container">
-            <div class="header">
-                <div class="clr"></div>
-            </div>
+
+
+
             
-            <div class="content">
-                <ul class="ca-menu ca-list">
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/casal-hetero100.png" class="ca-icon" >
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Héteros</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/casal-gay100.png" class="ca-icon" >
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Gays</h2>
-                            </div>
-                            <!--#3b3f4f-->
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/casal-lesbica100.png" class="ca-icon" >
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Lésbicas</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/solteiros.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Solteiros</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/solteiras.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Solteiras</h2>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="content">
-                <ul class="ca-menu ca-list">
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/casal-casal-trans100.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Casais</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/casal-casal-hetero100.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Casal</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/casal-casal-gay100.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Casal</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/casal-casal-lesbica100.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Casal</h2>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="content">
-                <ul class="ca-menu ca-list">
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/trans_color.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Travesti</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/fotos.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Fotos</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/eventos2.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Eventos</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/casas.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Casas</h2>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="content">
-                <ul class="ca-menu ca-list">
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/restaurantes.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title" style="font-size:20px !important">Restaurantes</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/pousada_hotel.png" class="ca-icon" style="margin-top: 0% !important">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title" style="margin-top:-6% !important;">Hóteis & <br> Pousadas</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/profissionais.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Profissionais</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/videos.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Vídeos</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/menu-circle/colorful/sexshop.png" class="ca-icon">
-                            <div class="ca-content">
-                                <h2 class="ca-main ca-title">Sex Shop</h2>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <ul>
-                    <a href="/prototype/userNewsFeedTemplate.html">TIMELINE</a>
-                </ul>
-            </div>
-            
+
+<section id="content" class="table-layout animated fadeIn">
+
+
+        
+
+</section>
+      
+      
+      
+      
+      
+      
+             
+
+
+
+
+
+
+
+
+
+
+
             
             
             <!-- content -->
-        </div>
+        <!--</div>-->
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
     
     </div>
@@ -981,6 +836,14 @@
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
 
+<!-- Mixitup Plugin -->
+  <script src="vendor/plugins/mixitup/jquery.mixitup.min.js"></script>
+
+<!-- Page Plugins -->
+  <script src="vendor/plugins/magnific/jquery.magnific-popup.js"></script>
+  <script src="vendor/plugins/fileupload/fileupload.js"></script>
+  <script src="vendor/plugins/holder/holder.min.js"></script>
+
 <!-- Bootstrap Tabdrop Plugin -->
 <script src="vendor/plugins/tabdrop/bootstrap-tabdrop.js"></script>
 
@@ -1049,6 +912,14 @@
       // Init plugins for ".calendar-widget"
       // plugins: FullCalendar
       //
+    // To keep our code clean and modular, all custom functionality will be
+    // contained inside a single object literal called "dropdownFilter".
+
+  
+
+
+
+
       $('#calendar-widget').fullCalendar({
         // contentHeight: 397,
         editable: true,
