@@ -16,10 +16,8 @@
             }
 
             $scope.login = function(form){
-
-               $scope.isLoading = true;
-
-               if (form && form.$valid) {
+                   if (form && form.$valid) {
+                   $scope.isLoading = true;
                    loginService.getToken($scope.Model.UserName, $scope.Model.Password).then(function(response){
                     
                     tokenFactory.setToken(response.access_token);
@@ -31,7 +29,7 @@
                     }
                     })
                     .catch(function(response){
-                        if(response.status == "400" || response.data.error_description != undefined)
+                        if(response.status == "400" || response.data != undefined)
                             messageFactory.addErrorMessage('Usuário ou senha inválidos');
                         else{
                             messageFactory.addErrorMessage('Ocorreu umm erro inesperado');

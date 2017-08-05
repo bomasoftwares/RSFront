@@ -56,7 +56,7 @@
   <script src="../../account/controllers/newAccountCtrl.js"></script>
   <script src="../../common/factories/token/tokenFactory.js"></script>
   <script src="../../common/factories/message/messageFactory.js"></script>
-  
+
 
 
 </head>
@@ -66,7 +66,7 @@
     <div id="main-sexmove" class="animated fadeIn skin-system">
       <div class="external-page sb-l-c sb-r-c">
         <div id="main-sexmove" class="animated fadeIn skin-system">
-          <section id="content_wrapper">
+          <!--<section id="content_wrapper">-->
             <section id="content">
 
               <div class="admin-form theme-info" id="register">
@@ -78,122 +78,122 @@
                     <a href="#">
                 <img src="../../img/logo.png" title="Logo Movie Sex" class="img-responsive w450" style="margin-bottom: 5%;">
 </a>
-</div>
-</div>
+                  </div>
+                </div>
 
-<!-- Registration Panel/Form -->
-<div class="panel mt40">
-  <form method="post"  name="newAccountForm" ng-init="register.agreeTerms = false" ng-submit="post(newAccountForm)">
-    <div class="panel-body bg-light bm-p21 pb15">
-      <div class="section row">
-        <label>Que tipo de cadastro você quer fazer?</label>
-        <br>
-        <br>
-        <div class="account-types">
-          <label class="account-type">
+                <!-- Registration Panel/Form -->
+                <div class="panel mt40">
+                  <form method="post" name="newAccountForm" ng-init="register.agreeTerms = false" ng-submit="post(newAccountForm)">
+                    <div class="panel-body bg-light bm-p21 pb15">
+                      <div class="section row">
+                        <label>Que tipo de cadastro você quer fazer?</label>
+                        <br>
+                        <br>
+                        <div class="account-types">
+                          <label class="account-type">
                       <input type="radio" name="AccountType" ng-model="AccountType" value="0" ng-required="true">
                       <i class="fa fa-user fa-3x"></i>
                       <br>
                       <br>
                       Usuário
                     </label>
-          <label class="account-type">
+                          <label class="account-type">
                     <input type="radio" name="AccountType" ng-model="AccountType" value="1" ng-required="true">
                     <i class="fa fa-group fa-3x"></i>
                     <br>
                     <br>
                     Acompanhante
                   </label>
-          <label class="account-type">
+                          <label class="account-type">
                     <input type="radio" name="AccountType" ng-model="AccountType" value="2" ng-required="true">
                     <i class="fa fa-building fa-3x"></i>
                     <br>
                     <br>
                     Comerciante
                   </label>
-        </div>
-        <!-- end section -->
-      </div>
-      <!-- end .section row section -->
-      <div class="section user-data animated fadeIn" ng-show="AccountType == 0">
-        <blockquote class="blockquote-danger">
-          <p>
-            <i class="fa fa-bell animated fadeRight"></i> Conta grátis por <strong class="bm-important">10 dias</strong>.</p>
-        </blockquote>
-        <br>
-        <div class="row">
-          <div class="col-md-12">
-            <label class="field prepend-icon">
+                        </div>
+                        <!-- end section -->
+                      </div>
+                      <!-- end .section row section -->
+                      <div class="section user-data animated fadeIn" ng-show="AccountType == 0">
+                        <blockquote class="blockquote-danger">
+                          <p>
+                            <i class="fa fa-bell animated fadeRight"></i> Conta grátis por <strong class="bm-important">10 dias</strong>.</p>
+                        </blockquote>
+                        <br>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <label class="field prepend-icon">
                         <input type="email" name="email" class="gui-input" placeholder="Email" ng-model="Model.Email" ng-required="true">
                         <label class="field-icon">
                           <i class="fa fa-envelope"></i>
                         </label>
-            </label>
-          </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-md-12">
-            <label class="field prepend-icon">
+                            </label>
+                          </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <label class="field prepend-icon">
                         <input type="text" name="nickName" class="gui-input" placeholder="Como prefere ser chamado?" ng-model="Model.NickName" ng-required="true">
                         <label class="field-icon">
                           <i class="fa fa-font"></i>
                         </label>
-            </label>
-          </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-md-12">
-            <label class="field prepend-icon">
+                            </label>
+                          </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <label class="field prepend-icon">
                         <input type="password" name="password" class="gui-input" placeholder="Senha" ng-model="Model.Password" ng-required="true">
                         <label class="field-icon">
                           <i class="fa fa-key"></i>
                         </label>
-            </label>
-          </div>
-        </div>
-      </div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
 
-      <div class="section partner-data animated fadeIn" ng-show="AccountType == 1 || AccountType == 2">
-        <br>
-        <div class="imagem">
-          <img src="../../img/tool.svg" alt="" width="30" height="30">
-        </div>
-        <label style="margin-left:37%;">Em construção</label>
-</div>
-<div class="section commerce-data animated fadeIn" ng-show="AccountType == 2"> </div>
+                      <div class="section partner-data animated fadeIn" ng-show="AccountType == 1 || AccountType == 2">
+                        <br>
+                        <div class="imagem">
+                          <img src="../../img/tool.svg" alt="" width="30" height="30">
+                        </div>
+                        <label style="margin-left:37%;">Em construção</label>
+                      </div>
+                      <div class="section commerce-data animated fadeIn" ng-show="AccountType == 2"> </div>
 
-<!-- end section -->
-</div>
-<div class="panel-footer clearfix">
-  <button type="submit" class="button btn-danger mr10 pull-right" ng-disabled="register.$invalid || agreeTerms != true || isLoading == true">Cadastrar</button>
+                      <!-- end section -->
+                    </div>
+                    <div class="panel-footer clearfix">
+                      <button type="submit" class="button btn-danger mr10 pull-right" ng-disabled="register.$invalid || agreeTerms != true || isLoading == true">Cadastrar</button>
 
-  <label class="option mt10">
+                      <label class="option mt10">
     <input type="checkbox" ng-model="agreeTerms">
     <span class="checkbox"></span>Eu aceito os
     <a href="../aggregates/terms/templates/index.html" class="theme-link" target="_blank"> termos de uso. </a>
   </label>
-</div>
+                    </div>
 
-</form>
-</div>
+                  </form>
+                </div>
 
-<!-- Registration Links -->
-<div class="footer-message">
-  <p>Já se registrou?
-    <a href="../../index.html" class="theme-link" title="Fazer login">Entrar agora!</a>
-  </p>
-</div>
-</div>
-</section>
-</section>
-</div>
-</div>
-<!-- End: Content-Wrapper -->
+                <!-- Registration Links -->
+                <div class="footer-message">
+                  <p>Já se registrou?
+                    <a href="../../index.html" class="theme-link" title="Fazer login">Entrar agora!</a>
+                  </p>
+                </div>
+              </div>
+            </section>
+          <!--</section>-->
+        </div>
+      </div>
+      <!-- End: Content-Wrapper -->
 
-</div>
-</div>
+    </div>
+  </div>
 </body>
 
 </html>

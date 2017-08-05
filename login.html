@@ -108,27 +108,26 @@
 </a>
 </div>
 </div>
-<pre>{{Model | json}} </pre>
-<form method="POST" name="loginForm">
+<form method="POST" name="loginForm" novalidate>
   <div class="col-sm-2">
   </div>
   <div class="col-sm-9">
     <div class="row">
       <label for="username" class="field prepend-icon">
-        <input type="text" class="gui-input" ng-model="Model.UserName" ng-required="true" style="background:#DCDCDC;" placeholder="Usuário" title="Entre com o usuário que já foi cadastrado">
-<label for="username" class="field-icon">
+        <input type="text" class="gui-input" name="UserName" ng-model="Model.UserName" ng-required="true" style="background:#DCDCDC;" placeholder="Usuário" title="Entre com o usuário que já foi cadastrado">
+        <label for="username" class="field-icon">
           <i class="fa fa-user"></i>
         </label>
-</label>
-</div>
-<div class="row">
-  <label for="password" class="field prepend-icon">
-        <input type="password" ng-model="Model.Password" ng-required="true" class="gui-input" style="background:#DCDCDC;" placeholder="Senha">
-<label for="password" class="field-icon">
-          <i class="fa fa-lock"></i>
-        </label>
-</label>
-</div>
+      </label>
+    </div>
+  <div class="row">
+    <label for="password" class="field prepend-icon">
+      <input type="password" name="Password" ng-model="Model.Password" ng-required="true" class="gui-input" style="background:#DCDCDC;" placeholder="Senha">
+      <label for="password" class="field-icon">
+        <i class="fa fa-lock"></i>
+      </label>
+    </label>
+  </div>
 </form>
 <div class="row">
   <div class="col-sm-6 without-border" style="margin-top:6.5%; margin-bottom:4%;">
@@ -142,6 +141,8 @@
 <div class="row teste">
   <a href="account/templates/newAccount.html" class="btn-block btn btn-dark" ng-disabled="isLoading">Registre-se <b> GRÁTIS </b> por 10 dias ! </a>
 </div>
+<p class="text-warning mn" ng-show="loginForm.$submitted && (loginForm.UserName.$error.required)">Preencha o campo usuário </p>
+<p class="text-warning mn" ng-show="loginForm.$submitted && (loginForm.Password.$error.required)">Preencha o campo senha</p>
 </div>
 
 <div class="col-sm-12 phrase">

@@ -9,7 +9,9 @@
                 request: function (config) {
                     var token = tokenFactory.getToken();
 
-                    if(!token) window.location.url = "../login.html";
+                    if(!token){
+                       window.location.href = "http://sexmove-dev.boma.com.br/login.html";        
+                    } 
 
                     if(config.url.indexOf('sexmoveapi.boma.com.br') > 0){
                         var token = tokenFactory.getToken();

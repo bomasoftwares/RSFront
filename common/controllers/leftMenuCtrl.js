@@ -24,26 +24,16 @@
             $scope.user = JSON.parse(userToken);    
         }
 
-
-
         //Método de inicialização
         function init(){
 
             $scope.getUserInfo();
-
         }
 
         $scope.logout = function(){
-            userService.logout().then(function(response){
-                tokenFactory.removeToken();
-                window.location.href = "http://sexmove-dev.boma.com.br/login.html";        
-            }).catch(function(response){
-                messageFactory.addErrorMessage('Erro ao fazer logout');
-            });
+            tokenFactory.removeToken();
+            window.location.href = "http://sexmove-dev.boma.com.br/login.html";        
         };
-
-
-        
 
         init();
     }]);
