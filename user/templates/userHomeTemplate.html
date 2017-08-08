@@ -1,11 +1,8 @@
-<section id="content" class="table-layout animated fadeIn">
+<section id="content" class="table-layout animated fadeIn" ng-controller="searchResultsCtrl as vm">
     <!-- begin: .tray-center -->
     <link rel="stylesheet" type="text/css" href="user/styles/user.css" />
     <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis' rel='stylesheet' type='text/css' />
     <div class="tray tray-center">
-          
-        <h2>Página inicial</h2>
-    
             <div class="container">
             <div class="header">
                 <div class="clr"></div>
@@ -14,7 +11,7 @@
             <div class="content">
                 <ul class="ca-menu ca-list">
                     <li>
-                        <a href="#">
+                        <a ng-href="/users/search/{{vm.hetero}}">
                             <img src="img/menu-circle/colorful/casal-hetero100.png" class="ca-icon" >
                             <div class="ca-content">
                                 <h2 class="ca-main ca-title">Héteros</h2>
