@@ -75,7 +75,7 @@
       </div>
   </div>
   <div class="admin-form theme-primary">
-    <form>
+    <form method="post" name="EditProfileForm"  ng-submit="post(EditProfileForm)>
         <div class="panel heading-border panel-primary">
           <div class="panel-body bg-light">
         <div class="section-divider mb40" id="spy1">
@@ -358,9 +358,13 @@
                     <option value="17">Tocantins</option>
                 </select>
             </div>
-          </div> 
           </div>
-          </div> 
+           <hr/>
+            <div class="col-md-2">
+                 <button type="submit" class="button btn-primary mr10 " >Cadastrar</button>
+             </div> 
+          </div>
+          </div>
     </form>
   </div>
 </section>
