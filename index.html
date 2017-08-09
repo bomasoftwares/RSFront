@@ -34,7 +34,7 @@
 <![endif]-->
 </head>
 
-<body class="dashboard-page">
+<body class="dashboard-page" id="body-content">
 
   <!-- Start: Main -->
   <div id="main">
@@ -86,7 +86,7 @@
 <!-- Angular-Loading Bar Js -->
 <script src="../../bower_components/angular-loading-bar/build/loading-bar.min.js"></script>
 
-
+<script src="../../bower_components/ng-file-upload/ng-file-upload.min.js"></script>
 
 <!-- Boma Js -->
 <script src="../../app.js"></script>
@@ -97,16 +97,24 @@
 <script src="common/factories/message/messageFactory.js"></script>
 <script src="common/factories/interceptors/httpInterceptorFactory.js"></script>
 <script src="common/directives/globalSearchDirective.js"></script>
+<script src="common/directives/panelPhotoDirective.js"></script>
+
 <script src="user/services/userService.js"></script>
+<script src="photos/services/photosService.js"></script>
+
 
 
 
 
 <!-- Controllers -->
 <script src="user/controllers/userHomeCtrl.js"></script>
+<script src="user/controllers/userNewsFeedCtrl.js"></script>
 <script src="common/controllers/leftMenuCtrl.js"></script>
 <script src="common/controllers/headerCtrl.js"></script>
 <script src="user/controllers/userEditCtrl.js"></script>
+<script src="search/controllers/searchResultsCtrl.js"></script>
+<script src="photos/controllers/photosGalleryCtrl.js"></script>
+
 
 
 <!--jQuery -->
@@ -130,6 +138,8 @@
 
 <!-- Widget Javascript -->
 <script src="assets/js/demo/widgets.js"></script>
+
+
 <script type="text/javascript">
     jQuery(document).ready(function () {
 

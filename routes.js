@@ -28,6 +28,16 @@
                         controller: 'userNewsFeedCtrl',
                         name: 'userNewsFeed'
                 })
+                .when('/users/search/:query', {
+                        templateUrl: 'search/templates/searchResultsTemplate.html',
+                        controller: 'searchResultsCtrl',
+                        name: 'searchResults'
+                })
+                .when('/users/photos/gallery', {
+                        templateUrl: 'photos/templates/galleryTemplate.html',
+                        controller: 'photosGalleryCtrl',
+                        name: 'userPhotosGallery'
+                })
                 .otherwise({
                         redirectTo: '/user/home'
                 });;
