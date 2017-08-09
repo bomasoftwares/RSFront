@@ -80,5 +80,13 @@
     cursor: pointer;
 }
 
+.bm-loading-photos{
+    left: 50%;
+    top: 50%;
+    display: block;
+}
+
+
+
 
 
