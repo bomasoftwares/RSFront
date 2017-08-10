@@ -6,6 +6,7 @@
 
         var userToken = tokenFactory.getUserToken();
         $scope.user = {};
+        $scope.filter = null;
         $scope.getUserInfo = function(){
             if(!userToken){
                 userService.getInfo().then(function(response){
@@ -24,7 +25,12 @@
             $scope.user = JSON.parse(userToken);    
         }
 
-
+        $scope.logout = function(){
+            $scope.logout = function(){
+            tokenFactory.removeToken();
+            window.location.href = "http://sexmove-dev.boma.com.br/login.html";        
+        };
+        }
 
         //Método de inicialização
         function init(){

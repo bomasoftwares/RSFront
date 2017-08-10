@@ -10,11 +10,7 @@
         function init(){
             $scope.getUserData();
         }
-
-
-
-
-        $scope.getUserData = function(){
+       $scope.getUserData = function(){
             var userToken = tokenFactory.getUserToken();
             $scope.Model = JSON.parse(userToken);    
         };

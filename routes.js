@@ -38,6 +38,11 @@
                         controller: 'photosGalleryCtrl',
                         name: 'userPhotosGallery'
                 })
+                .when('/users/videos/gallery', {
+                        templateUrl: 'videos/templates/videosGalleryTemplate.html',
+                        controller: 'videosGalleryCtrl',
+                        name: 'userPhotosGallery'
+                })
                 .otherwise({
                         redirectTo: '/user/home'
                 });;
