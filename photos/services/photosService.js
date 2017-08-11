@@ -24,6 +24,14 @@
                 });
             }
 
+            function _latestReportPhotos(){
+                return Restangular.all('files').all('report').all('photos').all('latest').getList();
+            }
+             
+            function _latestReportVideos(){
+                return Restangular.all('files').all('report').all('videos').all('latest').getList();
+            }
+
             var service = {
                  getPhotos: function () {
                     return _getPhotos();
@@ -33,6 +41,12 @@
                 },
                 uploadPhoto: function(newPhoto){
                     return _uploadPhoto(newPhoto);
+                },
+                latestReportPhotos: function(){
+                    return _latestReportPhotos();
+                },
+                latestReportVideos: function(){
+                    return _latestReportVideos();
                 }
 
             }

@@ -1,6 +1,4 @@
 
-
-
 <!-- Admin Forms CSS -->
 <link rel="stylesheet" type="text/css" href="../../assets/admin-tools/admin-forms/css/admin-forms.css">
 
@@ -75,7 +73,7 @@
       </div>
   </div>
   <div class="admin-form theme-primary">
-    <form method="post" name="EditProfileForm"  ng-submit="post(EditProfileForm)>
+    <form method="post" name="EditProfileForm"  ng-submit="vm.submit(EditProfileForm)" ng-controller="userEditProfileCtrl">
         <div class="panel heading-border panel-primary">
           <div class="panel-body bg-light">
         <div class="section-divider mb40" id="spy1">
@@ -85,7 +83,7 @@
             <div class="col-md-2">
                 <label><strong>  Quem é você:</strong></label>
                 <br>
-                <select class="form-control">
+                <select class="form-control" ng-model="model.Genre">
                     <option></option>
                     <option value="1">Homem</option>
                     <option value="2">Mulher</option>
@@ -97,7 +95,7 @@
             <div class="col-md-2">
                 <label><strong>Estado Civil:</strong></label>
                 <br>
-                <select class="form-control">
+                <select class="form-control" ng-Model="model.MaritalStatus">
                     <option></option>
                     <option value="1">Casado</option>
                     <option value="2">Namorando</option>
@@ -108,7 +106,7 @@
             </div>
             <div class="col-md-2">
                 <label><strong>CEP:</strong></label>
-                  <input type="text" class="form-control" placeholder="Ex: 99999-999">
+                  <input type="text" class="form-control" placeholder="Ex: 99999-999" ng-model="model.ZipCode">
             </div>
           </div>
           <br>
@@ -117,7 +115,7 @@
               <label><strong>  Meu resumo</strong></label>
               <div class="section">
                 <label class="field prepend-icon">
-                  <textarea class="gui-textarea" id="comment" name="comment"></textarea>
+                  <textarea class="gui-textarea" id="comment" name="comment" ng-model="model.Resume"></textarea>
                   <label for="comment" class="field-icon">
                     <i class="fa fa-comments"></i>
                   </label>
@@ -281,7 +279,7 @@
             <div class="col-md-2">
                 <label><strong>  Estado Civil de interesse:</strong></label>
                 <br>
-                <select class="form-control">
+                <select class="form-control" ng-model="model.MarialInterest">
                     <option></option>
                     <option value="1">Casado</option>
                     <option value="2">Namorando</option>
@@ -293,7 +291,7 @@
             <div class="col-md-2">
                 <label><strong>Que esteja no estado(UF):</strong></label>
                 <br>
-                <select class="form-control">
+                <select class="form-control" ng-model="model.StateInterest">
                     <option></option>
                     <option value="12">Acre</option>
                     <option value="27">Alagoas</option>
@@ -327,7 +325,7 @@
             <div class="col-md-2">
                 <label><strong>Que esteja na cidade:</strong></label>
                 <br>
-                <select class="form-control">
+                <select class="form-control" ng-model="CityInterest">
                     <option></option>
                     <option value="12">Acre</option>
                     <option value="27">Alagoas</option>
