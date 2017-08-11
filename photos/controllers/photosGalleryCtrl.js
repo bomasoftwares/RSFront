@@ -10,6 +10,7 @@
         //Método de inicialização
         function init(){
             getPhotos();
+
         }
 
         function getPhotos(){
@@ -38,7 +39,7 @@
         }
 
         vm.onFileSelect = function($files) {
-            vm.isLoading = true;
+            vm.isLoadingGallery = true;
             Upload.upload({
                 url: 'http://dev-sexmoveapi.boma.com.br/files',
                 file: $files,
@@ -49,7 +50,7 @@
             }).progress(function(e) {
             }).then(function(data, status, headers, config) {
                 getPhotos();
-                vm.isLoading = false;
+                vm.isLoadingGallery = false;
             }); 
         }
 

@@ -1,8 +1,9 @@
 <section id="content" class="table-layout animated fadeIn " ng-controller="videosGalleryCtrl as vm">
 <div class="tray tray-center">
   
-  <div class="bm-loading-photos" >
-      <img src="../../img/loading_32px.gif" class="img-responsive" ng-show="vm.isLoadingGallery">
+    <div class="bm-loading-photos" style="position:relative; margin-top:40%; margin-left:46%;" ng-show="vm.isLoadingGallery" >
+    <!--ng-show="vm.isLoadingGallery"-->
+      <img src="../../img/loading_80px.gif" class="img-responsive" >
     </div>
   <div class="mix-container" ng-show="!vm.isLoadingGallery">
     <h2> Meus vídeos</h2>
