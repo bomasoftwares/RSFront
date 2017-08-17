@@ -1,17 +1,29 @@
-angular.module('bmSexMoveLoginApp').
-service('userEditProfileService', ["$http", "Restangular",function($http, Restangular){
-    
+(function() {
+    'use strict';
 
-    function _editUserProfile(profile){
-      
-        return Restangular.all("users").all("updateProfile").post(profile);
-    }
-    
-    var service = {
-        editUserProfile: function (profile) {
-            return _editUserProfile(profile);
+    angular.module('bmSexMoveApp').
+    service('userEditProfileService', ["$http", "Restangular",function($http, Restangular){
+        
+        function _editUserProfile(profile){
+            return Restangular.all("users").all("updateProfile").post(profile);
         }
-    };
 
-    return service;
-}]);
+        function _getUserProfile(){
+            return Restangular.all("users").one("profile").get();
+        }
+        
+        var service = {
+            editUserProfile: function (profile) {
+                return _editUserProfile(profile);
+            },
+            getUserProfile: function () {
+                return _getUserProfile();
+            }
+        };
+
+        return service;
+    }]);
+    
+})();
+
+

@@ -20,8 +20,9 @@
                 })
                 .when('/user/edit', {
                         templateUrl: 'user/templates/userEditTemplate.html',
-                        controller: 'userEditCtrl',
-                        name: 'userEdit'
+                        controller: 'userEditProfileCtrl',
+                        controllerAs: 'vm',
+                        name: 'userEditProfileCtrl'
                 })
                 .when('/user/newsfeed', {
                         templateUrl: 'user/templates/userNewsFeed.html',

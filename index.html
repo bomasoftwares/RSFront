@@ -100,7 +100,7 @@
 <script src="common/directives/panelPhotoDirective.js"></script>
 
 <script src="user/services/userService.js"></script>
-<script src="user/services/userProfileService.js"></script>
+<script src="user/services/userEditProfileService.js"></script>
 <script src="photos/services/photosService.js"></script>
 <script src="videos/services/videosService.js"></script>
 
@@ -115,8 +115,6 @@
 <script src="search/controllers/searchResultsCtrl.js"></script>
 <script src="photos/controllers/photosGalleryCtrl.js"></script>
 <script src="videos/controllers/videosGalleryCtrl.js"></script>
-
-
 
 
 <!--jQuery -->
@@ -160,42 +158,6 @@
 
       // Init Theme Core
       Core.init();
-
-
-      // Init Widget Demo JS
-      // demoHighCharts.init();
-
-      // Because we are using Admin Panels we use the OnFinish
-      // callback to activate the demoWidgets. It's smoother if
-      // we let the panels be moved and organized before
-      // filling them with content from various plugins
-
-      // Init plugins used on this page
-      // HighCharts, JvectorMap, Admin Panels
-
-      // Init Admin Panels on widgets inside the ".admin-panels" container
-      // $('.admin-panels').adminpanel({
-      //   grid: '.admin-grid',
-      //   draggable: true,
-      //   preserveGrid: true,
-      //   // mobile: true,
-      //   onStart: function () {
-      //     // Do something before AdminPanels runs
-      //   },
-      //   onFinish: function () {
-      //     $('.admin-panels').addClass('animated fadeIn').removeClass('fade-onload');
-
-      //     // Init the rest of the plugins now that the panels
-      //     // have had a chance to be moved and organized.
-      //     // It's less taxing to organize empty panels
-      //     demoHighCharts.init();
-      //     // runVectorMaps(); // function below
-      //   },
-      //   onSave: function () {
-      //     $(window).trigger('resize');
-      //   }
-      // });
-
 
       "use strict";
 var dropdownFilter = {
@@ -606,48 +568,7 @@ var dropdownFilter = {
         name: 'Music Players',
         data: [11, 6, 5, 15, 17.0, 22.0, 30.8, 24.1, 14.1, 11.1, 9.6, 6.5]
       }];
-//  // Add Gallery Item to Lightbox
-//      $('.mix img').magnificPopup({
-//        type: 'image',
-//        callbacks: {
-//          beforeOpen: function(e) {
-//            // we add a class to body to indicate overlay is active
-//            // We can use this to alter any elements such as form popups
-//            // that need a higher z-index to properly display in overlays
-//            $('body').addClass('mfp-bg-open');
 
-//            // Set Magnific Animation
-//            this.st.mainClass = 'mfp-zoomIn';
-
-//            // Inform content container there is an animation
-//            this.contentContainer.addClass('mfp-with-anim');
-//          },
-//          afterClose: function(e) {
-
-//            setTimeout(function() {
-//              $('body').removeClass('mfp-bg-open');
-//              $(window).trigger('resize');
-//            }, 1000)
-
-//          },
-//          elementParse: function(item) {
-//            // Function will fire for each target element
-//            // "item.el" is a target DOM element (if present)
-//            // "item.src" is a source that you may modify
-//            item.src = item.el.attr('src');
-//          },
-//        },
-//        overflowY: 'scroll',
-//        removalDelay: 200, //delay removal by X to allow out-animation
-//        prependTo: $('#content_wrapper')
-//      });
-
-
-
-
-
-
-     
       // Init plugins for ".calendar-widget"
       // plugins: FullCalendar
       //

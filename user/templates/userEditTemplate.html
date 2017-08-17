@@ -83,19 +83,13 @@
             <div class="col-md-2">
                 <label><strong>  Quem é você:</strong></label>
                 <br>
-                <select class="form-control" ng-model="model.Genre">
-                    <option></option>
-                    <option value="1">Homem</option>
-                    <option value="2">Mulher</option>
-                    <option value="3">Casal - Ele e Ele</option>
-                    <option value="4">Casal - Ele e Ela</option>
-                    <option value="5">Casal - Ela e Ela</option>
+                <select class="form-control" ng-model="vm.Model.selectedGenre" ng-options="item as item.name for item in vm.genreOptions track by item.value">
                 </select>
             </div>
             <div class="col-md-2">
                 <label><strong>Estado Civil:</strong></label>
                 <br>
-                <select class="form-control" ng-Model="model.MaritalStatus">
+                <select class="form-control" ng-Model="vm.Model.selectedMaritalStatus" ng-options="item as item.name for item in vm.maritalStatusOptions track by item.value">
                     <option></option>
                     <option value="1">Casado</option>
                     <option value="2">Namorando</option>
@@ -106,7 +100,7 @@
             </div>
             <div class="col-md-2">
                 <label><strong>CEP:</strong></label>
-                  <input type="text" class="form-control" placeholder="Ex: 99999-999" ng-model="model.ZipCode">
+                  <input type="text" class="form-control" placeholder="Ex: 99999-999" ng-model="vm.Model.ZipCode">
             </div>
           </div>
           <br>
@@ -115,37 +109,16 @@
               <label><strong>  Meu resumo</strong></label>
               <div class="section">
                 <label class="field prepend-icon">
-                  <textarea class="gui-textarea" id="comment" name="comment" ng-model="model.Resume"></textarea>
+                  <textarea class="gui-textarea" id="comment" name="comment" ng-model="vm.Model.Summary"></textarea>
                   <label for="comment" class="field-icon">
                     <i class="fa fa-comments"></i>
                   </label>
                   <span class="input-footer">
-                    <strong>Exemplo: </strong> Pessoa muito séria e que gosta de novas aventuras</span>
+                    <strong>Exemplo: </strong> Pessoa que gosta de novas aventuras</span>
                 </label>
               </div>
             </div>
           </div>
-          <!--<div class="row">
-            <div class="panel sort-disable mb50 panel-collapsed" id="p2" data-panel-color="false" data-panel-fullscreen="false" data-panel-remove="false" data-panel-title="false">
-              <div class="panel-heading">
-                <span class="panel-icon">
-                    <i class="fa fa-minus"></i>
-                </span>
-                <span class="panel-title"> You can minimize me!</span>
-                <span class="panel-controls">
-                  <a href="#" class="panel-control-loader"></a>
-                  <a href="#" class="panel-control-collapse"></a>
-                </span>
-              </div>
-              <div class="panel-body" style="display: none;">
-                  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
-                  </p>
-                  <hr class="short alt">
-                  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
-                  </p>
-              </div>
-              </div>
-          </div>-->
           <div class="section-divider mb40" id="spy1">
             <span>Meus interesses</span>
           </div>
@@ -156,31 +129,31 @@
                 <br>
                 <div class="option-group field">
                   <label class="option option-primary">
-                    <input type="checkbox" name="checked" value="1">
+                    <input type="checkbox" ng-model="vm.Model.MyInterestMan">
                     <span class="checkbox"></span>Homem
                   </label>
                   <label class="option option-primary">
-                    <input type="checkbox" name="checked" value="2">
+                    <input type="checkbox" ng-model="vm.Model.MyInterestWoman">
                     <span class="checkbox"></span>Mulher
                   </label>
                   <label class="option option-primary">
-                    <input type="checkbox" name="checked" value="3">
+                    <input type="checkbox" ng-model="vm.Model.MyInterestCoupleHeAndHe">
                     <span class="checkbox"></span>Casal (Homem e Homem)
                   </label>                  
                   <label class="option option-primary">
-                    <input type="checkbox" name="checked" value="4">
+                    <input type="checkbox" ng-model="vm.Model.MyInterestCoupleHeAndShe">
                     <span class="checkbox"></span>Casal (Homem e Mulher)
                   </label>
                   <label class="option option-primary">
-                    <input type="checkbox" name="checked" value="5">
+                    <input type="checkbox" ng-model="vm.Model.MyInterestCoupleSheAndShe">
                     <span class="checkbox"></span>Casal (Mulher e Mulher)
                   </label>
                   <label class="option option-primary">
-                    <input type="checkbox" name="checked" value="6">
+                    <input type="checkbox" ng-model="vm.Model.MyInterestTrans">
                     <span class="checkbox"></span>Trans
                   </label>
                   <label class="option option-primary">
-                    <input type="checkbox" name="checked" value="7">
+                    <input type="checkbox" name="checked" ng-model="vm.Model.MyInterestCrossdresser">
                     <span class="checkbox"></span>CD(Crossdresser)
                   </label>                                                                                          
                 </div>
@@ -201,25 +174,25 @@
                 <div class="col-md-12">
                     <div class="col-md-3">
                       <label class="option option-primary">
-                      <input type="checkbox" name="checked" value="1">
+                      <input type="checkbox" name="checked" ng-model="vm.Model.MyRelationshipExhibitionism">
                       <span class="checkbox"></span>Exibicionismo
                     </label>
                     </div>
                     <div class="col-md-3">
                       <label class="option option-primary">
-                      <input type="checkbox" name="checked" value="2">
+                      <input type="checkbox" name="checked" ng-model="vm.Model.MyRelationshipRomantic">
                       <span class="checkbox"></span>Romantico
                     </label>
                     </div>
                     <div class="col-md-3">
                       <label class="option option-primary">
-                      <input type="checkbox" name="checked" value="3">
+                      <input type="checkbox" name="checked" ng-model="vm.Model.MyRelationshipQuickSex">
                       <span class="checkbox"></span>Sexo rápido
                     </label>                  
                     </div>
                     <div class="col-md-3">
                       <label class="option option-primary">
-                        <input type="checkbox" name="checked" value="4">
+                        <input type="checkbox" name="checked" ng-model="vm.Model.MyRelationshipDiscreet">
                         <span class="checkbox"></span>Discreto
                       </label>
                     </div>
@@ -230,25 +203,25 @@
                 <div class="col-md-12">
                     <div class="col-md-3">
                       <label class="option option-primary">
-                        <input type="checkbox" name="checked" value="5">
+                        <input type="checkbox" name="checked" ng-model="vm.Model.MyRelationshipOnlyFriendship">
                         <span class="checkbox"></span>Apenas amizade
                       </label>
                     </div>
                     <div class="col-md-3">
                       <label class="option option-primary">
-                        <input type="checkbox" name="checked" value="6">
+                        <input type="checkbox" name="checked" ng-model="vm.Model.MyRelationshipCasualSex">
                         <span class="checkbox"></span>Sexo casual
                       </label>
                     </div>
                     <div class="col-md-3">
                       <label class="option option-primary">
-                        <input type="checkbox" name="checked" value="7">
+                        <input type="checkbox" name="checked" ng-model="vm.Model.MyRelationshipSexWithTwo">
                       <span class="checkbox"></span>Sexo a dois
                       </label>
                     </div>
                     <div class="col-md-3">
                       <label class="option option-primary">
-                        <input type="checkbox" name="checked" value="8">
+                        <input type="checkbox" name="checked" ng-model="vm.Model.MyRelationshipBetweenCouples">
                         <span class="checkbox"></span>Entre casais
                       </label>
                     </div>
@@ -260,13 +233,13 @@
                     
                     <div class="col-md-3">
                       <label class="option option-primary">
-                        <input type="checkbox" name="checked" value="9">
+                        <input type="checkbox" name="checked" ng-model="vm.Model.MyRelationshipGroupSex">
                         <span class="checkbox"></span>Em grupo (3 ou mais)
                       </label>
                     </div>
                     <div class="col-md-3">
                       <label class="option option-primary">
-                        <input type="checkbox" name="checked" value="10">
+                        <input type="checkbox" name="checked" ng-model="vm.Model.MyRelationshipOthers">
                         <span class="checkbox"></span>Outros
                       </label>   
                     </div>
@@ -275,90 +248,8 @@
             </div>
           </div>
           <br>
-          <div class="row">
-            <div class="col-md-2">
-                <label><strong>  Estado Civil de interesse:</strong></label>
-                <br>
-                <select class="form-control" ng-model="model.MarialInterest">
-                    <option></option>
-                    <option value="1">Casado</option>
-                    <option value="2">Namorando</option>
-                    <option value="3">Noivo</option>
-                    <option value="4">Solteiro</option>
-                    <option value="5">Viuva</option>
-                </select>
-            </div>
-            <div class="col-md-2">
-                <label><strong>Que esteja no estado(UF):</strong></label>
-                <br>
-                <select class="form-control" ng-model="model.StateInterest">
-                    <option></option>
-                    <option value="12">Acre</option>
-                    <option value="27">Alagoas</option>
-                    <option value="16">Amapá</option>
-                    <option value="13">Amazonas</option>
-                    <option value="29">Bahia</option>
-                    <option value="23">Ceará</option>
-                    <option value="53">Distrito Federal</option>
-                    <option value="32">Espírito Santo</option>
-                    <option value="52">Goiás</option>
-                    <option value="21">Maranhão</option>
-                    <option value="51">Mato Grosso</option>
-                    <option value="50">Mato Grosso do Sul</option>
-                    <option value="31">Minas Gerais</option>
-                    <option value="15">Pará</option>
-                    <option value="25">Paraíba</option>
-                    <option value="41">Paraná</option>
-                    <option value="26">Pernambuco</option>
-                    <option value="22">Piauí</option>
-                    <option value="33">Rio de Janeiro</option>
-                    <option value="24">Rio Grande do Norte</option>
-                    <option value="43">Rio Grande do Sul</option>
-                    <option value="11">Rondônia</option>
-                    <option value="14">Roraima</option>
-                    <option value="42">Santa Catarina</option>
-                    <option value="35">São Paulo</option>
-                    <option value="28">Sergipe</option>
-                    <option value="17">Tocantins</option>
-                </select>
-            </div>
-            <div class="col-md-2">
-                <label><strong>Que esteja na cidade:</strong></label>
-                <br>
-                <select class="form-control" ng-model="CityInterest">
-                    <option></option>
-                    <option value="12">Acre</option>
-                    <option value="27">Alagoas</option>
-                    <option value="16">Amapá</option>
-                    <option value="13">Amazonas</option>
-                    <option value="29">Bahia</option>
-                    <option value="23">Ceará</option>
-                    <option value="53">Distrito Federal</option>
-                    <option value="32">Espírito Santo</option>
-                    <option value="52">Goiás</option>
-                    <option value="21">Maranhão</option>
-                    <option value="51">Mato Grosso</option>
-                    <option value="50">Mato Grosso do Sul</option>
-                    <option value="31">Minas Gerais</option>
-                    <option value="15">Pará</option>
-                    <option value="25">Paraíba</option>
-                    <option value="41">Paraná</option>
-                    <option value="26">Pernambuco</option>
-                    <option value="22">Piauí</option>
-                    <option value="33">Rio de Janeiro</option>
-                    <option value="24">Rio Grande do Norte</option>
-                    <option value="43">Rio Grande do Sul</option>
-                    <option value="11">Rondônia</option>
-                    <option value="14">Roraima</option>
-                    <option value="42">Santa Catarina</option>
-                    <option value="35">São Paulo</option>
-                    <option value="28">Sergipe</option>
-                    <option value="17">Tocantins</option>
-                </select>
-            </div>
-          </div>
            <hr/>
-            <div class="col-md-2">
+            <div class="col-md-2 pull-right">
                  <button type="submit" class="button btn-primary mr10 " >Cadastrar</button>
              </div> 
           </div>
