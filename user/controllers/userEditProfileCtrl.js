@@ -4,7 +4,7 @@
     angular.module('bmSexMoveApp').controller('userEditProfileCtrl',['userEditProfileService', function (userEditProfileService) {
         var vm = this;
         vm.Model = [];
-        vm.IsLoadingProfile = false;
+        vm.isLoadingProfile = false;
 
         vm.genreOptions = [
             { name: "Homem", value: 0 },         
@@ -24,6 +24,7 @@
 
         function init(){
 
+            vm.isLoadingProfile = true;
             vm.Model.MyInterestMan = false;
             vm.Model.MyInterestWoman = false;
             vm.Model.MyInterestCoupleHeAndHe = false;
@@ -130,19 +131,33 @@
                 }
 
 
-                vm.IsLoadingProfile = false;
+                vm.isLoadingProfile = false;
                 
                 
             }).catch(function(responseError){
                 console.log(responseError);
-                vm.IsLoadingProfile = false;
+                vm.isLoadingProfile = false;
             });
 
         }
 
+        vm.submit = function (formEditProfile){
+            if  (formEditProfile.$valid)
+            {
+                vm.isLoadingProfile = true;
+                userEditProfileService.editUserProfile(vm.Model).then(function(){
+                    vm.isLoadingProfile = false;
+                }).catch(function(responseError){
+                    messageFactory.addErrorMessage('Erro ao salvar perfil', responseError);
+                    vm.isLoadingProfile = false;
+                });
+            }
+        }
 
 
         init();
+
+
 
 
     }]);

@@ -5,7 +5,7 @@
     service('userEditProfileService', ["$http", "Restangular",function($http, Restangular){
         
         function _editUserProfile(profile){
-            return Restangular.all("users").all("updateProfile").post(profile);
+            return Restangular.all("users").all("updateProfile").customPUT(profile);
         }
 
         function _getUserProfile(){
