@@ -7,8 +7,12 @@
                     </tr>
                   </thead>
                   <tbody>
+                    <tr ng-show="vm.isLoadingVideosReport">
+                        <td colspan="12">
+                          <img src="../../img/loading_80px.gif" class="img-responsive" style="position:relative; margin-top:3%; margin-left:45%; margin-bottom: 3%;">
+                        </td>
+                    </tr>
                     <tr ng-repeat="item in vm.latestVideosItems">
-                      <!-- | orderBy: item.CreatedAt track by item.Id -->
                       <td class="w150">
                         <img class="img-responsive mw30 ib mr10" title="user" src="{{item.Url}}">
                       </td>
