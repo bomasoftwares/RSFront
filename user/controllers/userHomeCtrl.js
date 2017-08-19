@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('bmSexMoveApp').controller('userHomeCtrl',['photosService', function (photosService) {
+    angular.module('bmSexMoveApp').controller('userHomeCtrl',['photosService', '$filter', function (photosService, $filter) {
         var vm = this;
         //Método de inicialização
         function init(){

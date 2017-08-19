@@ -28,7 +28,7 @@
         $scope.logout = function(){
             $scope.logout = function(){
             tokenFactory.removeToken();
-            window.location.href = "http://sexmove-dev.boma.com.br/login.html";        
+            window.location.href = "http://sexmove-preview.azurewebsites.net/login.html";        
         };
         }
 

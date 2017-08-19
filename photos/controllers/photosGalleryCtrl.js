@@ -41,7 +41,7 @@
         vm.onFileSelect = function($files) {
             vm.isLoadingGallery = true;
             Upload.upload({
-                url: 'http://dev-sexmoveapi.boma.com.br/files',
+                url: 'http://api-sexmove.azurewebsites.net/files',
                 file: $files,
                 headers: {
                     'X-Requested-With': 'XMLHttpRequest',
@@ -59,7 +59,7 @@
             if(formNewPhoto.file.$valid)
             {
                 Upload.upload({
-                    url: 'http://dev-sexmoveapi.boma.com.br' + '/files',
+                    url: 'http://api-sexmove.azurewebsites.net' + '/files',
                     data: {file: formNewPhoto.file},
                     headers: {
                     'X-Requested-With': 'XMLHttpRequest',

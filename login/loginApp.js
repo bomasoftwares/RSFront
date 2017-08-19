@@ -24,7 +24,7 @@
      function (routeProvider, RestangularProvider, httpProvider, cfpLoadingBarProvider) {
 
         // Configurações Restangular
-        RestangularProvider.setBaseUrl('http://dev-sexmoveapi.boma.com.br');
+        RestangularProvider.setBaseUrl('http://api-sexmove.azurewebsites.net');
         RestangularProvider.setDefaultHeaders({ 'Content-Type': 'application/json' });
             
         cfpLoadingBarProvider.includeSpinner = true;

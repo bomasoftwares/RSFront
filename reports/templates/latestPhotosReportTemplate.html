@@ -18,7 +18,12 @@
                         <img class="img-responsive mw30 ib mr10" title="user" src="{{item.Url}}">
                       </td>
                       <td class="">{{item.Name}}</td>
-                      <td class="">{{item.CreatedAt}}</td>
+                      <td class="">{{item.CreatedAt | date:'dd-MM-yyyy'}}</td>
+                    </tr>
+                    <tr ng-show="vm.latestPhotosItems.length == 0">
+                      <td>
+                        Nenhum resultado encontrado
+                      </td>
                     </tr>
                   </tbody>
                 </table>

@@ -10,10 +10,10 @@
                     var token = tokenFactory.getToken();
 
                     if(!token){
-                       window.location.href = "http://sexmove-dev.boma.com.br/login.html";        
+                       window.location.href = "http://sexmove-preview.azurewebsites.net/login.html";        
                     } 
 
-                    if(config.url.indexOf('sexmoveapi.boma.com.br') > 0){
+                    if(config.url.indexOf('api-sexmove.azurewebsites.net') > 0){
                         var token = tokenFactory.getToken();
                         if(token) config.headers.Authorization = "Bearer "+token;
                     }
@@ -43,7 +43,7 @@
                 responseError: function (response) {
 
                     if(response.status == 401)
-                        window.location.href = "/";
+                         window.location.href = "http://sexmove-preview.azurewebsites.net/login.html";        
                     
                     return $q.reject(response);
                 }

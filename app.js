@@ -33,7 +33,7 @@
             httpProvider.interceptors.push('httpInterceptorFactory');
 
             // Configurações Restangular
-            RestangularProvider.setBaseUrl('http://dev-sexmoveapi.boma.com.br');
+            RestangularProvider.setBaseUrl('http://api-sexmove.azurewebsites.net');
             
             RestangularProvider.setDefaultHeaders({ 'Content-Type': 'application/json' });
 

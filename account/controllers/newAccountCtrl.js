@@ -50,7 +50,7 @@
     function ($scope, Restangular, newAccountService, messageFactory, tokenFactory, $window) {
         
         function initializer(){
-            Restangular.setBaseUrl('http://dev-sexmoveapi.boma.com.br');
+            Restangular.setBaseUrl('http://api-sexmove.azurewebsites.net');
             Restangular.setDefaultHeaders({ 'Content-Type': 'application/json' });
 
         }
